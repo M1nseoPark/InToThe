@@ -3,6 +3,7 @@ package com.example.intothe;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -42,10 +43,10 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // 회원가입 처리 시작
-                String strEmail = mEtEmail.getText().toString();
-                String strPwd = mEtPwd.getText().toString();
-                String strName = mEtName.getText().toString();
-                String strBirth = mEtBirth.getText().toString();
+                String strEmail = mEtEmail.getText().toString().trim();
+                String strPwd = mEtPwd.getText().toString().trim();
+                String strName = mEtName.getText().toString().trim();
+                String strBirth = mEtBirth.getText().toString().trim();
 
                 // FirebaseAuth 진행
                 mFirebaseAuth.createUserWithEmailAndPassword(strEmail, strPwd).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
@@ -65,6 +66,10 @@ public class RegisterActivity extends AppCompatActivity {
                             mDatabaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
 
                             Toast.makeText(RegisterActivity.this, "회원가입에 성공하셨습니다", Toast.LENGTH_SHORT).show();
+
+                            // 로그인 화면으로 이동
+                            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                            startActivity(intent);
                         }
                         else {
                             Toast.makeText(RegisterActivity.this, "회원가입에 실패하셨습니다", Toast.LENGTH_SHORT).show();

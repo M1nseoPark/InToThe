@@ -48,31 +48,46 @@ public class RegisterActivity extends AppCompatActivity {
                 String strName = mEtName.getText().toString().trim();
                 String strBirth = mEtBirth.getText().toString().trim();
 
+
                 // FirebaseAuth 진행
                 mFirebaseAuth.createUserWithEmailAndPassword(strEmail, strPwd).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            FirebaseUser firebaseUser = mFirebaseAuth.getCurrentUser();
-
-                            UserAccount account = new UserAccount();
-                            account.setIdToken(firebaseUser.getUid());
-                            account.setEmailId(firebaseUser.getEmail());
-                            account.setPassword(strPwd);
-                            account.setUserName(strName);
-                            account.setUserBirth(strBirth);
-
-                            // setValue : database에 삽입
-                            mDatabaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
-
-                            Toast.makeText(RegisterActivity.this, "회원가입에 성공하셨습니다", Toast.LENGTH_SHORT).show();
-
-                            // 로그인 화면으로 이동
-                            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                            startActivity(intent);
+                        if (strEmail.isEmpty()) {
+                            Toast.makeText(RegisterActivity.this, "아이디를 입력해주세요", Toast.LENGTH_SHORT).show();
+                        }
+                        else if (strPwd.isEmpty()) {
+                            Toast.makeText(RegisterActivity.this, "비밀번호를 입력해주세요", Toast.LENGTH_SHORT).show();
+                        }
+                        else if (strName.isEmpty()) {
+                            Toast.makeText(RegisterActivity.this, "이름을 입력해주세요", Toast.LENGTH_SHORT).show();
+                        }
+                        else if (strBirth.isEmpty()) {
+                            Toast.makeText(RegisterActivity.this, "생년월일을 입력해주세요", Toast.LENGTH_SHORT).show();
                         }
                         else {
-                            Toast.makeText(RegisterActivity.this, "회원가입에 실패하셨습니다", Toast.LENGTH_SHORT).show();
+                            if (task.isSuccessful()) {
+                                FirebaseUser firebaseUser = mFirebaseAuth.getCurrentUser();
+
+                                UserAccount account = new UserAccount();
+                                account.setIdToken(firebaseUser.getUid());
+                                account.setEmailId(firebaseUser.getEmail());
+                                account.setPassword(strPwd);
+                                account.setUserName(strName);
+                                account.setUserBirth(strBirth);
+
+                                // setValue : database에 삽입
+                                mDatabaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
+
+                                Toast.makeText(RegisterActivity.this, "회원가입에 성공하셨습니다", Toast.LENGTH_SHORT).show();
+
+                                // 로그인 화면으로 이동
+                                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                                startActivity(intent);
+                            }
+                            else {
+                                Toast.makeText(RegisterActivity.this, "회원가입에 실패하셨습니다", Toast.LENGTH_SHORT).show();
+                            }
                         }
                     }
                 });

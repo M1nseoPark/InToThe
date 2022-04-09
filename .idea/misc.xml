@@ -5,11 +5,15 @@
       <map>
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/drawable/button1.xml" value="0.21145833333333333" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/drawable/round1.xml" value="0.21145833333333333" />
+        <entry key="..\:/Users/minseo/intothe/app/src/main/res/drawable/talkbox.xml" value="0.215625" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.11640625" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout-w936dp/activity_login.xml" value="0.149609375" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/activity_login.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/activity_register.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/log_in.xml" value="0.1953125" />
+        <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/social_scale_1.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/social_scale_2.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/social_scale_3.xml" value="0.19947916666666668" />
       </map>
     </option>
   </component>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#AEDEE3">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="bottom"
+            app:srcCompat="@drawable/talkbox" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="230dp"
+            android:layout_marginBottom="110dp"
+            app:srcCompat="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/tvSituation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="575dp"
+            android:layout_marginLeft="35dp"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:text="둘 중 어느 쪽에 얼마나\n가까운 것 같은지 표시해줘!"/>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="300dp"
+            android:text="완료"/>
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#AEDEE3">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/test" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_gravity="bottom"
+            app:srcCompat="@drawable/talkbox" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="230dp"
+            android:layout_marginBottom="180dp"
+            app:srcCompat="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/tvSituation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="505dp"
+            android:layout_marginLeft="35dp"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:text="치킨이 먹고 싶은데 용돈을 다 써서\n엄마 지갑에서 돈을 몰래 꺼내서 치킨을\n사먹었어"/>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="300dp"
+            android:background="@drawable/noun_triangle"/>
+    </FrameLayout>
+
+</LinearLayout>

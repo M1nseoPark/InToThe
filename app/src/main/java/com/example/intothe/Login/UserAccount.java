@@ -1,4 +1,4 @@
-package com.example.intothe;
+package com.example.intothe.Login;
 
 // 사용자 계정 정보 모델 클래스
 public class UserAccount {

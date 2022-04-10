@@ -38,6 +38,9 @@
         <activity
             android:name=".SocialScale.SocialScale3"
             android:exported="true"/>
+        <activity
+            android:name=".SocialScale.SocialScale4"
+            android:exported="true"/>
     </application>
 
 </manifest>

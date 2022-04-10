@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.example.intothe.MainActivity;
 import com.example.intothe.R;
 import com.google.android.gms.common.util.ArrayUtils;
 
@@ -19,7 +20,8 @@ import java.util.Random;
 
 public class SocialScale2 extends AppCompatActivity {
 
-    ArrayList<Situation> array = new ArrayList<Situation>();
+    public static ArrayList<Situation> array = new ArrayList<Situation>();
+    public static int pick;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +43,8 @@ public class SocialScale2 extends AppCompatActivity {
         array.add(new Situation("치킨이 먹고 싶은데 용돈을 다 써서\n엄마 지갑에서 돈을 몰래 꺼내서 치킨을\n사먹었어", "괜찮다", "옳지 않다", 2, "http://drive.google.com/uc?export=view&id=1HW0CMiuwAF8zK56BW2b3tX1b-QCB7q8D"));
 
         Random rand = new Random();
-        int pick = rand.nextInt(10);
-
+        pick = rand.nextInt(10);
+        
         tvSituation.setText(array.get(pick).getSituation());
         Glide.with(this).load(array.get(pick).getPhoto()).error(R.drawable.test).into(socialImage);
 

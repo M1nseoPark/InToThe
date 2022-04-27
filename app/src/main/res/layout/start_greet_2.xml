@@ -23,28 +23,24 @@
             android:layout_gravity="bottom"
             app:srcCompat="@drawable/talkbox" />
 
-        <Button
-            android:id="@+id/startButton"
-            android:layout_width="330dp"
-            android:layout_height="70dp"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_marginBottom="140dp"
+            android:layout_marginBottom="150dp"
             android:layout_marginLeft="40dp"
             android:textColor="@color/black"
             android:textSize="18dp"
-            android:text="훈련 시작하기" />
+            android:text="(이름)아 나랑 한달 동안 할 특별한 인사를\n정할 시간이야!"/>
 
         <Button
-            android:id="@+id/myPage"
-            android:layout_width="330dp"
-            android:layout_height="70dp"
+            android:id="@+id/next"
+            android:layout_width="20dp"
+            android:layout_height="25dp"
             android:layout_gravity="bottom"
-            android:layout_marginBottom="50dp"
-            android:layout_marginLeft="40dp"
-            android:textColor="@color/black"
-            android:textSize="18dp"
-            android:text="마이페이지" />
-
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="300dp"
+            android:background="@drawable/noun_triangle"/>
     </FrameLayout>
 
 </LinearLayout>

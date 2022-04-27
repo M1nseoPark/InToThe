@@ -26,11 +26,6 @@
         <activity
             android:name=".SocialScale.SocialScale1"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".SocialScale.SocialScale2"
@@ -41,6 +36,15 @@
         <activity
             android:name=".SocialScale.SocialScale4"
             android:exported="true"/>
+        <activity
+            android:name=".SettingGreet.SettingGreet"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

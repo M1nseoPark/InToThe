@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9EDCB">
+
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/viewKonfetti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:layout_gravity="center"
+            android:background="@drawable/label" />
+
+        <RelativeLayout
+            android:id="@+id/layoutRoulette"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:background="@drawable/background_roulette">
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="선택된 감정은?"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRotate"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="170dp"
+        android:padding="15sp"
+        android:text="돌리기"
+        android:background="@drawable/circle"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="bottom"
+        app:srcCompat="@drawable/talkbox" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="230dp"
+        android:layout_marginBottom="170dp"
+        app:srcCompat="@drawable/profile" />
+
+    <TextView
+        android:id="@+id/tvSituation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="505dp"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:text="짜잔! 내가 너랑 더 얘기하고 싶어서 만들었어!\n우리 이걸 돌려서 나오는 감정을 언제\n느껴봤는지 말해보자\n룰렛을 돌려줘"/>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="300dp"
+        android:background="@drawable/noun_triangle"/>
+
+</FrameLayout>

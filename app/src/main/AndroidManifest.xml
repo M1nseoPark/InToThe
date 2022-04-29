@@ -42,6 +42,12 @@
             android:name=".SocialScale.SocialScale4"
             android:exported="true"/>
         <activity
+            android:name=".FaceExpand.PhotoActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".SpeakFeeling.SpeakFeeling2"
+            android:exported="true"/>
+        <activity
             android:name=".SettingGreet.SettingGreet"
             android:exported="true">
 
@@ -49,16 +55,18 @@
         <activity
             android:name=".FaceExpand.FaceExpand1"
             android:exported="true">
+
+        </activity>
+        <activity android:name=".SpeakFeeling.Roulette"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".FaceExpand.PhotoActivity"
-            android:exported="true"/>
 
+<!--        카메라 연결-->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.example.intothe.fileprovider"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F4E3E3"
+    android:background="#F9EDCB"
     tools:context=".Login.LoginActivity">
 
     <TextView
@@ -53,6 +53,7 @@
         android:background="@drawable/button1"
         android:textColor="@color/white"
         android:textSize="20dp"
+        android:textAllCaps="false"
         android:text="log in" />
 
     <LinearLayout

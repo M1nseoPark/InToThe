@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F4E3E3"
+    android:background="#F9EDCB"
     tools:context=".Login.RegisterActivity">
 
     <TextView
@@ -76,6 +76,7 @@
         android:layout_marginRight="40dp"
         android:background="@drawable/button1"
         android:textColor="@color/white"
+        android:textAllCaps="false"
         android:textSize="20dp"
         android:text="sign up" />
 

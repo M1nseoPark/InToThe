@@ -4,7 +4,15 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#AEDEE3">
+    android:background="#F9EDCB">
+
+    <ImageView
+        android:id="@+id/btn_photo"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="300dp"
+        app:srcCompat="@drawable/camera" />
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -13,7 +21,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="30dp"
             app:srcCompat="@drawable/profile"/>
 
         <ImageView
@@ -24,23 +32,15 @@
             app:srcCompat="@drawable/talkbox" />
 
         <TextView
+            android:id="@+id/talk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_marginBottom="90dp"
-            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="130dp"
+            android:layout_marginLeft="30dp"
             android:textColor="@color/black"
             android:textSize="18dp"
-            android:text="(이름)아 내가 몇 가지 이야기를 해줄게.\n너는 내 이야기를 듣고 두 가지 단어 중\n어느 쪽에 얼마나 가깝다고 생각하는지\n표시해줘!"/>
-
-        <Button
-            android:id="@+id/next"
-            android:layout_width="20dp"
-            android:layout_height="25dp"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="30dp"
-            android:layout_marginLeft="300dp"
-            android:background="@drawable/noun_triangle"/>
+            android:text="(이름)아 얼굴 확대하기 시간이야.\n카메라 버튼을 누르고 이목구비를 확대해서\n찍어볼래?"/>
     </FrameLayout>
 
 </LinearLayout>

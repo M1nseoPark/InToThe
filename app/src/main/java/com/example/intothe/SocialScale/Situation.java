@@ -6,13 +6,15 @@ public class Situation {
     private String exam2;
     private int answer;
     private String photo;
+    private String feedback;
 
-    public Situation(String situation, String exam1, String exam2, int answer, String photo) {
+    public Situation(String situation, String exam1, String exam2, int answer, String photo, String feedback) {
         this.situation = situation;
         this.exam1 = exam1;
         this.exam2 = exam2;
         this.answer = answer;
         this.photo = photo;
+        this.feedback = feedback;
     }
 
     public String getSituation() {
@@ -53,5 +55,13 @@ public class Situation {
 
     public void setPhoto(String photo) {
         this.photo = photo;
+    }
+
+    public String getFeedback() {
+        return feedback;
+    }
+
+    public void setFeedback(String feedback) {
+        this.feedback = feedback;
     }
 }

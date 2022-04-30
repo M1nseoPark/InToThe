@@ -47,6 +47,8 @@
         <activity
             android:name=".SpeakFeeling.SpeakFeeling2"
             android:exported="true"/>
+        <activity android:name=".ChangeFace2.ChangeFace22"
+            android:exported="true"/>
         <activity
             android:name=".SettingGreet.SettingGreet"
             android:exported="true">
@@ -61,7 +63,11 @@
             android:exported="true">
 
         </activity>
-        <activity android:name=".ChangeFace.ChangeFace1"
+        <activity android:name=".ChangeFace1.ChangeFace11"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".ChangeFace2.ChangeFace21"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

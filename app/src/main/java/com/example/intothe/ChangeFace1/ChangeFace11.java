@@ -1,4 +1,4 @@
-package com.example.intothe.ChangeFace;
+package com.example.intothe.ChangeFace1;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,16 +11,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.intothe.FaceExpand.PhotoActivity;
 import com.example.intothe.R;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
-public class ChangeFace1 extends AppCompatActivity {
+public class ChangeFace11 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.change_face_1);
+        setContentView(R.layout.change_face_11);
 
         TextView feeling = (TextView) findViewById(R.id.feeling);
 

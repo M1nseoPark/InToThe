@@ -24,21 +24,22 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:layout_marginLeft="15dp"
             android:textColor="@color/black"
             android:textSize="20dp"
             android:layout_weight="1"
+            android:fontFamily="@font/notosanskr_regular"
+            android:textStyle="bold"
             android:text="어떤 감정 상황일까?" />
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="match_parent"
+    <VideoView
+        android:id="@+id/video"
+        android:layout_width="wrap_content"
         android:layout_height="200dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        android:layout_marginRight="20dp"/>
 
     <Button
         android:id="@+id/exam1"
@@ -49,7 +50,9 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/setcheck_bt"
         android:textColor="@drawable/color"
-        android:text="Button" />
+        android:fontFamily="@font/notosanskr_regular"
+        android:textSize="17dp"
+        android:text="기쁨" />
 
     <Button
         android:id="@+id/exam2"
@@ -60,7 +63,9 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/setcheck_bt"
         android:textColor="@drawable/color"
-        android:text="Button" />
+        android:fontFamily="@font/notosanskr_regular"
+        android:textSize="17dp"
+        android:text="슬픔" />
 
     <Button
         android:id="@+id/exam3"
@@ -71,7 +76,9 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/setcheck_bt"
         android:textColor="@drawable/color"
-        android:text="Button" />
+        android:fontFamily="@font/notosanskr_regular"
+        android:textSize="17dp"
+        android:text="놀람" />
 
     <Button
         android:id="@+id/exam4"
@@ -83,7 +90,9 @@
         android:layout_marginBottom="20dp"
         android:background="@drawable/setcheck_bt"
         android:textColor="@drawable/color"
-        android:text="Button" />
+        android:fontFamily="@font/notosanskr_regular"
+        android:textSize="17dp"
+        android:text="분노" />
 
     <Button
         android:id="@+id/finish"
@@ -92,6 +101,7 @@
         android:background="#EB4985"
         android:textColor="@color/white"
         android:layout_weight="1"
+        android:fontFamily="@font/notosanskr_regular"
         android:textStyle="bold"
         android:textSize="17dp"
         android:text="선택 완료" />

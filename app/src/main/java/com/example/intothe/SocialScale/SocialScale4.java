@@ -46,8 +46,8 @@ public class SocialScale4 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (ChangeFace21.number < 3) {
-                    ChangeFace21.number += 1;
+                if (SocialScale1.number < 3) {
+                    SocialScale1.number += 1;
                     Intent intent = new Intent(getApplicationContext(), SocialScale2.class);
                     startActivity(intent);
                 }

@@ -5,27 +5,40 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#875FC0"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="자폐증 지수 테스트"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/testDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:text="시행날짜 2022.04.29"
+            android:textColor="#C4C4C4"
+            android:textSize="17sp" />
+    </LinearLayout>
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="@android:color/background_light"
-                android:elevation="1dp"
-                app:tabGravity="fill"
-                app:tabMode="fixed"
-                app:tabSelectedTextColor="#000000"
-                app:tabTextColor="#7f7f7f"
-                tools:ignore="SpeakableTextPresentCheck"
-                app:tabIndicatorColor="#FFB45C"
-                app:tabIndicatorHeight="3dp"/>
-        </com.google.android.material.appbar.AppBarLayout>
+        android:layout_height="match_parent"
+        android:layout_below="@id/linear">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -35,5 +48,16 @@
 
         </FrameLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FA3A4F"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:text="완료" />
 
 </RelativeLayout>

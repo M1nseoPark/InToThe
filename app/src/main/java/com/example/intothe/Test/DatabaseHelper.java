@@ -1,4 +1,4 @@
-package com.example.intothe;
+package com.example.intothe.Test;
 
 import android.content.Context;
 import android.content.res.AssetManager;

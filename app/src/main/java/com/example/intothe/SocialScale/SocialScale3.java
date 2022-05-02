@@ -17,8 +17,8 @@ public class SocialScale3 extends AppCompatActivity {
 
     private ProgressBar progressBar1;
     private ProgressBar progressBar2;
-    public static int value1 = 0;
-    public static int value2 = 100;
+    public static int value1;
+    public static int value2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +33,12 @@ public class SocialScale3 extends AppCompatActivity {
         Button btnUp1 = (Button)findViewById(R.id.btnUp1);
         Button btnUp2 = (Button)findViewById(R.id.btnUp2);
 
+        value1 = 0;
+        value2 = 100;
 
-        tvExam1.setText(SocialScale2.array.get(SocialScale2.pick).getExam1());
-        tvExam2.setText(SocialScale2.array.get(SocialScale2.pick).getExam2());
+
+        tvExam1.setText(SocialScale2.array.get(SocialScale1.pick.get(SocialScale1.number)).getExam1());
+        tvExam2.setText(SocialScale2.array.get(SocialScale1.pick.get(SocialScale1.number)).getExam2());
 
 
         // 다음 버튼

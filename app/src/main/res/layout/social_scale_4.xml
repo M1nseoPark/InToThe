@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#AEDEE3">
+    android:background="#F9EDCB">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="260dp"
             android:layout_gravity="bottom"
             app:srcCompat="@drawable/talkbox" />
 
@@ -28,11 +28,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_marginBottom="130dp"
-            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="90dp"
+            android:layout_marginLeft="30dp"
             android:textColor="@color/black"
             android:textSize="18dp"
-            android:text="다시 한번 생각해볼래? 엄마 아빠랑 같이\n어느 쪽이 정답일지 이야기해보는 것도\n좋을 것 같아"/>
+            android:fontFamily="@font/notosanskr_regular"
+            android:text="너가 강아지가 됐다고 상상해봐.\n잠깐 화장실에 갔다온다던 주인이 돌아오지 않아.\n춥고 배도 고프고 주변엔 처음 보는 강아지들뿐이야.\n어떨 것 같니? 강아지도 소중한 생명이고 생명을\n키운다는 것은 큰 책임감을 요구하는 일이야."/>
 
         <Button
             android:id="@+id/next"

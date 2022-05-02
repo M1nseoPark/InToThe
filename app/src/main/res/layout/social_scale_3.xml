@@ -15,9 +15,11 @@
             android:id="@+id/tvExam1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="90dp"
+            android:layout_marginTop="40dp"
             android:layout_marginLeft="50dp"
-            android:textSize="25dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/notosanskr_regular"
             android:textColor="@color/black"
             android:text="TextView" />
 
@@ -48,8 +50,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="50dp"
-            android:textSize="25dp"
+            android:layout_marginTop="30dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/notosanskr_regular"
             android:textColor="@color/black"
             android:text="TextView" />
 
@@ -98,9 +102,10 @@
             android:id="@+id/tvSituation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="110dp"
+            android:layout_marginTop="120dp"
             android:layout_marginLeft="35dp"
             android:textColor="@color/black"
+            android:fontFamily="@font/notosanskr_regular"
             android:textSize="18dp"
             android:text="둘 중 어느 쪽에 얼마나\n가까운 것 같은지 표시해줘!"/>
 

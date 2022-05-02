@@ -1,10 +1,15 @@
 package com.example.intothe.SocialScale;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.intothe.ChangeFace2.ChangeFace21;
+import com.example.intothe.ChangeFace2.ChangeFace22;
 import com.example.intothe.R;
 
 public class SocialScale4 extends AppCompatActivity {
@@ -15,13 +20,16 @@ public class SocialScale4 extends AppCompatActivity {
         setContentView(R.layout.social_scale_4);
 
         TextView tvFeedback = (TextView)findViewById(R.id.tvFeedback);
+        Button next = (Button) findViewById(R.id.next);
 
-        if (SocialScale2.array.get(SocialScale2.pick).getAnswer() == 1) {
+
+        // 사용자의 답변에 대한 피드백
+        if (SocialScale2.array.get(SocialScale1.pick.get(SocialScale1.number)).getAnswer() == 1) {
             if (SocialScale3.value1 >= 80) {
                 tvFeedback.setText("잘했어! (이름)아. 내 생각도 너랑 같아");
             }
             else {
-                tvFeedback.setText("다시 한번 생각해볼래? 엄마 아빠랑 같이\n어느 쪽이 정답일지 이야기해보는 것도\n좋을 것 같아");
+                tvFeedback.setText(SocialScale2.array.get(SocialScale1.pick.get(SocialScale1.number)).getFeedback());
             }
         }
         else {
@@ -29,20 +37,21 @@ public class SocialScale4 extends AppCompatActivity {
                 tvFeedback.setText("잘했어! (이름)아. 내 생각도 너랑 같아");
             }
             else {
-                tvFeedback.setText("다시 한번 생각해볼래? 엄마 아빠랑 같이\n어느 쪽이 정답일지 이야기해보는 것도\n좋을 것 같아");
+                tvFeedback.setText(SocialScale2.array.get(SocialScale1.pick.get(SocialScale1.number)).getFeedback());
             }
         }
 
 
-//        // 다음 버튼
-//        Button button = (Button) findViewById(R.id.next);
-//
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), SocialScale4.class);
-//                startActivity(intent);
-//            }
-//        });
+        // 버튼 누르면 다음 화면으로 이동
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (ChangeFace21.number < 3) {
+                    ChangeFace21.number += 1;
+                    Intent intent = new Intent(getApplicationContext(), SocialScale2.class);
+                    startActivity(intent);
+                }
+            }
+        });
     }
 }

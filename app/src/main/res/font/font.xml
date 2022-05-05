@@ -5,4 +5,14 @@
         android:font="@font/notosanskr_regular"
         android:fontWeight="400"
         android:fontStyle="normal" />
+
+    <font
+        android:font="@font/spoqahansansneo_medium"
+        android:fontWeight="300"
+        android:fontStyle="normal" />
+
+    <font
+        android:font="@font/spoqahansansneo_regular"
+        android:fontWeight="300"
+        android:fontStyle="normal" />
 </font-family>

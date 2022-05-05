@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF6F6">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFBDBE">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/spoqahansansneo_regular"
+                android:text="홍길동"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="175dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/mypage_deco" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btSetting"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/button2"
+        android:drawableLeft="@drawable/locked"
+        android:paddingLeft="28dip"
+        android:paddingRight="90dp"
+        android:fontFamily="@font/spoqahansansneo_regular"
+        android:textStyle="bold"
+        android:text="보호자 비밀번호 설정" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/button2"
+        android:drawableLeft="@drawable/report"
+        android:paddingLeft="28dip"
+        android:paddingRight="155dp"
+        android:fontFamily="@font/spoqahansansneo_regular"
+        android:textStyle="bold"
+        android:text="훈련 기록" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/button2"
+        android:drawableLeft="@drawable/report2"
+        android:paddingLeft="28dip"
+        android:paddingRight="145dp"
+        android:fontFamily="@font/spoqahansansneo_regular"
+        android:textStyle="bold"
+        android:text="진단 기록지" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/button2"
+        android:drawableLeft="@drawable/headphones"
+        android:paddingLeft="28dip"
+        android:paddingRight="160dp"
+        android:fontFamily="@font/spoqahansansneo_regular"
+        android:textStyle="bold"
+        android:text="고객센터" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/button2"
+        android:drawableLeft="@drawable/setting"
+        android:paddingLeft="28dip"
+        android:paddingRight="160dp"
+        android:fontFamily="@font/spoqahansansneo_regular"
+        android:textStyle="bold"
+        android:text="환경설정" />
+
+
+</LinearLayout>

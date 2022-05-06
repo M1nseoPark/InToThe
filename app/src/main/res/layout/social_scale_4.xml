@@ -11,10 +11,11 @@
         android:layout_height="match_parent">
 
         <ImageView
+            android:id="@+id/gom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
-            app:srcCompat="@drawable/profile"/>
+            app:srcCompat="@drawable/gom_front"/>
 
         <ImageView
             android:id="@+id/imageView3"
@@ -28,11 +29,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_marginBottom="90dp"
-            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="100dp"
+            android:layout_marginLeft="20dp"
             android:textColor="@color/black"
             android:textSize="18dp"
-            android:fontFamily="@font/notosanskr_regular"
+            android:fontFamily="@font/spoqahansansneo_medium"
             android:text="너가 강아지가 됐다고 상상해봐.\n잠깐 화장실에 갔다온다던 주인이 돌아오지 않아.\n춥고 배도 고프고 주변엔 처음 보는 강아지들뿐이야.\n어떨 것 같니? 강아지도 소중한 생명이고 생명을\n키운다는 것은 큰 책임감을 요구하는 일이야."/>
 
         <Button

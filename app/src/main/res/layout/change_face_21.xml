@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
-            app:srcCompat="@drawable/profile"/>
+            app:srcCompat="@drawable/gom_front"/>
 
         <ImageView
             android:id="@+id/imageView3"
@@ -31,7 +31,7 @@
             android:layout_marginBottom="110dp"
             android:layout_marginLeft="30dp"
             android:textColor="@color/black"
-            android:fontFamily="@font/notosanskr_regular"
+            android:fontFamily="@font/spoqahansansneo_medium"
             android:textSize="18dp"
             android:text="이번엔 내가 (이름)에게 영상 3개를 보여줄게!\n이게 어떤 감정 상황인지 맞춰 줄래?"/>
 

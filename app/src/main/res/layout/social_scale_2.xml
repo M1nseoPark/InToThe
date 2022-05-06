@@ -24,21 +24,21 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:layout_gravity="bottom"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="230dp"
             android:layout_marginBottom="180dp"
-            app:srcCompat="@drawable/profile" />
+            app:srcCompat="@drawable/gom_face" />
 
         <TextView
             android:id="@+id/tvSituation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="485dp"
+            android:layout_marginTop="500dp"
             android:layout_marginLeft="35dp"
             android:textColor="@color/black"
-            android:fontFamily="@font/notosanskr_regular"
+            android:fontFamily="@font/spoqahansansneo_medium"
             android:textSize="18dp"
             android:text="치킨이 먹고 싶은데 용돈을 다 써서\n엄마 지갑에서 돈을 몰래 꺼내서 치킨을\n사먹었어"/>
 

@@ -4,24 +4,25 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#AEDEE3">
+    android:background="#F9EDCB">
 
-    <FrameLayout
+    <TextView
+        android:id="@+id/textView8"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/spoqahansansneo_medium"
+        android:gravity="center_horizontal"
+        android:textColor="#ff568c"
+        android:text="안녕! 나는 뿌이야"
+        android:textSize="30dp" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            app:srcCompat="@drawable/profile"/>
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_gravity="bottom"
-            app:srcCompat="@drawable/talkbox2" />
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="400dp"
+        app:srcCompat="@drawable/gom_hello" />
 
         <Button
             android:id="@+id/testButton"
@@ -44,7 +45,5 @@
             android:textColor="@color/black"
             android:textSize="18dp"
             android:text="마이페이지" />
-
-    </FrameLayout>
 
 </LinearLayout>

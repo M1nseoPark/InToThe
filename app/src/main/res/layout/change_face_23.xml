@@ -11,10 +11,11 @@
         android:layout_height="match_parent">
 
         <ImageView
+            android:id="@+id/gom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
-            app:srcCompat="@drawable/profile"/>
+            app:srcCompat="@drawable/gom_front"/>
 
         <ImageView
             android:id="@+id/imageView3"
@@ -31,7 +32,7 @@
             android:layout_marginBottom="120dp"
             android:layout_marginLeft="30dp"
             android:textColor="@color/black"
-            android:fontFamily="@font/notosanskr_regular"
+            android:fontFamily="@font/spoqahansansneo_medium"
             android:textSize="18dp"
             android:text="잘했어! 이렇게 하면 돼\n이제 다음 문제도 풀어볼까? 파이팅!"/>
 

@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
-            app:srcCompat="@drawable/profile"/>
+            app:srcCompat="@drawable/gom_front"/>
 
         <ImageView
             android:id="@+id/imageView3"
@@ -37,6 +37,7 @@
                 android:layout_height="wrap_content"
                 android:text="슬픔이 나왔네!\n너는 언제 슬픔을 느껴봤어?"
                 android:textColor="@color/black"
+                android:fontFamily="@font/spoqahansansneo_medium"
                 android:textSize="18dp" />
 
             <EditText
@@ -46,7 +47,8 @@
                 android:layout_marginTop="15dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="여기에 너의 경험을 입력해줘!" />
+                android:fontFamily="@font/spoqahansansneo_medium"
+                android:hint="여기에 너의 경험을 입력해줘!" />
         </LinearLayout>
 
         <Button

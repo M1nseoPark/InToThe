@@ -4,12 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.amitshekhar.DebugDB;
 import com.example.intothe.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -26,11 +28,24 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText mEtEmail, mEtPwd, mEtName, mEtBirth;   // 회원가입 입력 필드
     private Button mBtnRegister;   // 회원가입 버튼
 
+    UserDBHelper userDbHelper;
+    SQLiteDatabase db = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        DebugDB.getAddressLog();
+
+        // UserDB 생성
+        UserDBHelper helper;
+        SQLiteDatabase db;
+        helper = new UserDBHelper(RegisterActivity.this, "User.db", null, 1);
+        db = helper.getWritableDatabase();
+        helper.onCreate(db);
+
+        // 파이어베이스
         mFirebaseAuth = FirebaseAuth.getInstance();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference();
 
@@ -79,6 +94,8 @@ public class RegisterActivity extends AppCompatActivity {
 
                                 // setValue : database에 삽입
                                 mDatabaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
+                                String sql = "insert into user values ('" + strName + "', '" + strEmail + "', '" + strBirth + "');";
+                                db.execSQL(sql);
 
                                 Toast.makeText(RegisterActivity.this, "회원가입에 성공하셨습니다", Toast.LENGTH_SHORT).show();
 

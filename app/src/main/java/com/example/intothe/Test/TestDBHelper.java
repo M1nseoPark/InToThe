@@ -13,14 +13,14 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class DatabaseHelper extends SQLiteOpenHelper {
+public class TestDBHelper extends SQLiteOpenHelper {
     static String NAME = "test.db";   // to-do*
     static SQLiteDatabase.CursorFactory FACTORY = null;
     static String PACKEGE = "com.example.intothe"; //to-do
     static String DB = "test.db";   // to-do*
     static int VERSION  = 1;
 
-    public DatabaseHelper(Context context) {
+    public TestDBHelper(Context context) {
         super(context, NAME, FACTORY, VERSION);
         // TODO Auto-generated constructor stub
         try {

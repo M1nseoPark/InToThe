@@ -52,6 +52,7 @@
         android:padding="15sp"
         android:text="돌리기"
         android:background="@drawable/circle"
+        android:fontFamily="@font/spoqahansansneo_regular"
         android:textSize="14sp"
         android:textStyle="bold"
         android:textColor="@color/white"/>
@@ -68,8 +69,8 @@
         android:layout_gravity="bottom"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="230dp"
-        android:layout_marginBottom="170dp"
-        app:srcCompat="@drawable/profile" />
+        android:layout_marginBottom="160dp"
+        app:srcCompat="@drawable/gom_face" />
 
     <TextView
         android:id="@+id/tvSituation"
@@ -78,6 +79,7 @@
         android:layout_marginTop="505dp"
         android:layout_marginLeft="30dp"
         android:textColor="@color/black"
+        android:fontFamily="@font/spoqahansansneo_medium"
         android:textSize="18dp"
         android:text="짜잔! 내가 너랑 더 얘기하고 싶어서 만들었어!\n우리 이걸 돌려서 나오는 감정을 언제\n느껴봤는지 말해보자\n룰렛을 돌려줘"/>
 

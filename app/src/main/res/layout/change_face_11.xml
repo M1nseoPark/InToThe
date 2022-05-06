@@ -32,14 +32,15 @@
             android:layout_marginLeft="80dp"
             android:layout_marginTop="50dp"
             android:textColor="@color/black"
+            android:fontFamily="@font/spoqahansansneo_medium"
             android:textSize="25dp"
             android:text="TextView" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            app:srcCompat="@drawable/profile"/>
+            android:layout_marginTop="100dp"
+            app:srcCompat="@drawable/gom_front"/>
 
         <ImageView
             android:id="@+id/imageView3"
@@ -57,6 +58,7 @@
             android:layout_marginLeft="30dp"
             android:textColor="@color/black"
             android:textSize="18dp"
+            android:fontFamily="@font/spoqahansansneo_medium"
             android:text="내가 셋을 셀게\n그동안 넌 카메라 버튼을 누르고\n내 머리 위에 있는 단어 표정을 지어봐!"/>
     </FrameLayout>
 

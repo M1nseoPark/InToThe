@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.amitshekhar.DebugDB;
 import com.example.intothe.SocialScale.SocialScale2;
 import com.example.intothe.Test.TestList;
 import com.example.intothe.Test.TestListView;
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        DebugDB.getAddressLog();
 
         Button testButton = (Button) findViewById(R.id.testButton);
         Button myPage = (Button) findViewById(R.id.myPage);

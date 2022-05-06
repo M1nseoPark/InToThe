@@ -17,31 +17,48 @@
         android:textSize="35dp"
         android:textStyle="bold"
         android:textColor="@color/black"
+        android:fontFamily="@font/spoqahansansneo_medium"
         android:text="Sign In" />
 
-    <EditText
-        android:id="@+id/et_email"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:ems="10"
-        android:hint="     이메일"
-        android:inputType="textEmailAddress"
-        android:background="@drawable/round1"/>
+        android:background="@drawable/round1">
 
-    <EditText
-        android:id="@+id/et_pwd"
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="25dp"
+            android:ems="10"
+            android:hint="이메일"
+            android:fontFamily="@font/spoqahansansneo_medium"
+            android:inputType="textEmailAddress"
+            android:background="@android:color/transparent"/>
+    </FrameLayout>
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="40dp"
-        android:ems="10"
-        android:hint="  비밀번호"
-        android:inputType="textPassword"
-        android:background="@drawable/round1"/>
+        android:background="@drawable/round1">
+
+        <EditText
+            android:id="@+id/et_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:layout_marginLeft="25dp"
+            android:fontFamily="@font/spoqahansansneo_medium"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            android:background="@android:color/transparent"/>
+    </FrameLayout>
 
     <Button
         android:id="@+id/btn_login"
@@ -52,6 +69,7 @@
         android:layout_marginRight="40dp"
         android:background="@drawable/button1"
         android:textColor="@color/white"
+        android:fontFamily="@font/spoqahansansneo_medium"
         android:textSize="20dp"
         android:textAllCaps="false"
         android:text="log in" />
@@ -67,6 +85,7 @@
             android:layout_height="wrap_content"
             android:textSize="15dp"
             android:layout_gravity="center"
+            android:fontFamily="@font/spoqahansansneo_medium"
             android:text="아직 계정이 없으신가요?"/>
 
         <Button
@@ -78,6 +97,7 @@
             android:layout_gravity="center"
             android:textStyle="bold"
             android:textSize="15dp"
+            android:fontFamily="@font/spoqahansansneo_medium"
             android:text="가입하기" />
     </LinearLayout>
 </LinearLayout>

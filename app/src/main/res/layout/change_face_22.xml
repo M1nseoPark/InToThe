@@ -18,18 +18,18 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            app:srcCompat="@drawable/profile" />
+            app:srcCompat="@drawable/gom_curious" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="50dp"
             android:layout_marginLeft="15dp"
             android:textColor="@color/black"
             android:textSize="20dp"
             android:layout_weight="1"
-            android:fontFamily="@font/notosanskr_regular"
+            android:fontFamily="@font/spoqahansansneo_regular"
             android:textStyle="bold"
             android:text="어떤 감정 상황일까?" />
     </LinearLayout>
@@ -50,7 +50,7 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/setcheck_bt"
         android:textColor="@drawable/color"
-        android:fontFamily="@font/notosanskr_regular"
+        android:fontFamily="@font/spoqahansansneo_medium"
         android:textSize="17dp"
         android:text="기쁨" />
 
@@ -63,7 +63,7 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/setcheck_bt"
         android:textColor="@drawable/color"
-        android:fontFamily="@font/notosanskr_regular"
+        android:fontFamily="@font/spoqahansansneo_medium"
         android:textSize="17dp"
         android:text="슬픔" />
 
@@ -76,7 +76,7 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/setcheck_bt"
         android:textColor="@drawable/color"
-        android:fontFamily="@font/notosanskr_regular"
+        android:fontFamily="@font/spoqahansansneo_medium"
         android:textSize="17dp"
         android:text="놀람" />
 
@@ -90,7 +90,7 @@
         android:layout_marginBottom="20dp"
         android:background="@drawable/setcheck_bt"
         android:textColor="@drawable/color"
-        android:fontFamily="@font/notosanskr_regular"
+        android:fontFamily="@font/spoqahansansneo_medium"
         android:textSize="17dp"
         android:text="분노" />
 
@@ -98,10 +98,10 @@
         android:id="@+id/finish"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#EB4985"
+        android:background="#FFBDBE"
         android:textColor="@color/white"
         android:layout_weight="1"
-        android:fontFamily="@font/notosanskr_regular"
+        android:fontFamily="@font/spoqahansansneo_medium"
         android:textStyle="bold"
         android:textSize="17dp"
         android:text="선택 완료" />

@@ -87,7 +87,7 @@ public class TestList extends Fragment {
 
     public void openDB() {
         Log.v(TAG, "openDB() 실행");
-        DatabaseHelper helper = new DatabaseHelper(getContext());
+        TestDBHelper helper = new TestDBHelper(getContext());
         database = helper.getWritableDatabase();
 
 

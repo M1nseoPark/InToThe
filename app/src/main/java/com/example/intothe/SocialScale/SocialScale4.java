@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +22,7 @@ public class SocialScale4 extends AppCompatActivity {
 
         TextView tvFeedback = (TextView)findViewById(R.id.tvFeedback);
         Button next = (Button) findViewById(R.id.next);
+        ImageView gom = (ImageView) findViewById(R.id.gom);
 
 
         // 사용자의 답변에 대한 피드백
@@ -29,6 +31,7 @@ public class SocialScale4 extends AppCompatActivity {
                 tvFeedback.setText("잘했어! (이름)아. 내 생각도 너랑 같아");
             }
             else {
+                gom.setImageResource(R.drawable.gom_sad);
                 tvFeedback.setText(SocialScale2.array.get(SocialScale1.pick.get(SocialScale1.number)).getFeedback());
             }
         }
@@ -37,6 +40,7 @@ public class SocialScale4 extends AppCompatActivity {
                 tvFeedback.setText("잘했어! (이름)아. 내 생각도 너랑 같아");
             }
             else {
+                gom.setImageResource(R.drawable.gom_sad);
                 tvFeedback.setText(SocialScale2.array.get(SocialScale1.pick.get(SocialScale1.number)).getFeedback());
             }
         }

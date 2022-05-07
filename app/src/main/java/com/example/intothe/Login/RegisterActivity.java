@@ -39,11 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
         DebugDB.getAddressLog();
 
         // UserDB 생성
-        UserDBHelper helper;
-        SQLiteDatabase db;
-        helper = new UserDBHelper(RegisterActivity.this, "User.db", null, 1);
-        db = helper.getWritableDatabase();
-        helper.onCreate(db);
+        UserDBHelper myDb = new UserDBHelper(RegisterActivity.this);
 
         // 파이어베이스
         mFirebaseAuth = FirebaseAuth.getInstance();
@@ -94,8 +90,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                                 // setValue : database에 삽입
                                 mDatabaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
-                                String sql = "insert into user values ('" + strName + "', '" + strEmail + "', '" + strBirth + "');";
-                                db.execSQL(sql);
+                                myDb.addBook(strName, strEmail, strBirth);
 
                                 Toast.makeText(RegisterActivity.this, "회원가입에 성공하셨습니다", Toast.LENGTH_SHORT).show();
 

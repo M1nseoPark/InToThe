@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +28,8 @@ public class LoginActivity extends AppCompatActivity {
     private DatabaseReference mDatabaseRef;   // 실시간 데이터베이스
     private EditText mEtEmail, mEtPwd;   // 회원가입 입력 필드
 
+    public static String userName;   // 로그인 한 사용자 이름
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,9 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         DebugDB.getAddressLog();
+
+        UserDBHelper myDb = new UserDBHelper(LoginActivity.this);
+        SQLiteDatabase db = myDb.getReadableDatabase();
 
         mFirebaseAuth = FirebaseAuth.getInstance();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("InToThe");
@@ -54,6 +61,14 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // 로그인 성공
+                            Cursor cursor = db.rawQuery("select * from user where email = ?", new String[]{strEmail});
+                            while(cursor.moveToNext()){
+                                userName = cursor.getString(1);
+                            }
+                            myDb.close();
+                            db.close();
+                            cursor.close();
+
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(intent);
                             finish();   // 현재 액티비티 파괴

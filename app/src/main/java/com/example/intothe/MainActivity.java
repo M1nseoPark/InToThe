@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.amitshekhar.DebugDB;
+import com.example.intothe.FaceExpand.FaceExpand1;
+import com.example.intothe.MyPage.MyPage;
 import com.example.intothe.SocialScale.SocialScale2;
 import com.example.intothe.Test.TestList;
 import com.example.intothe.Test.TestListView;
@@ -25,15 +27,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        DebugDB.getAddressLog();
-
+        Button trainButton = (Button) findViewById(R.id.trainButton);
         Button testButton = (Button) findViewById(R.id.testButton);
-        Button myPage = (Button) findViewById(R.id.myPage);
+        Button myPageButton = (Button) findViewById(R.id.myPage);
+
+        trainButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), FaceExpand1.class);
+                startActivity(intent);
+            }
+        });
 
         testButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), TestListView.class);
+                startActivity(intent);
+            }
+        });
+
+        myPageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MyPage.class);
                 startActivity(intent);
             }
         });

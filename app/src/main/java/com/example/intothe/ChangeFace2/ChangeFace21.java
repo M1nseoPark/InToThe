@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.intothe.Login.LoginActivity;
 import com.example.intothe.R;
 
 import java.util.ArrayList;
@@ -23,6 +25,9 @@ public class ChangeFace21 extends AppCompatActivity {
         setContentView(R.layout.change_face_21);
 
         Button button = (Button) findViewById(R.id.next);
+        TextView talk = (TextView) findViewById(R.id.talk);
+
+        talk.setText("이번엔 내가 " + LoginActivity.userName.substring(1,3) + "(이)에게 영상 3개를 보여줄게!\n이게 어떤 감정 상황인지 맞춰 줄래?");
 
         // 문제 랜덤 선택
         Random rand = new Random();

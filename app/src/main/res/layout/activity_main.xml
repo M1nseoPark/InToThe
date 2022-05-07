@@ -24,26 +24,32 @@
         android:layout_height="400dp"
         app:srcCompat="@drawable/gom_hello" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
         <Button
-            android:id="@+id/testButton"
-            android:layout_width="330dp"
-            android:layout_height="70dp"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="140dp"
-            android:layout_marginLeft="40dp"
-            android:textColor="@color/black"
-            android:textSize="18dp"
+            android:id="@+id/trainButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="훈련 시작하기" />
 
         <Button
-            android:id="@+id/myPage"
-            android:layout_width="330dp"
+            android:id="@+id/testButton"
+            android:layout_width="wrap_content"
             android:layout_height="70dp"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="50dp"
-            android:layout_marginLeft="40dp"
+            android:text="진단 시작하기"
             android:textColor="@color/black"
-            android:textSize="18dp"
-            android:text="마이페이지" />
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/myPage"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:text="마이페이지"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+    </LinearLayout>
 
 </LinearLayout>

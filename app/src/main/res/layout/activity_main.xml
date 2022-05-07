@@ -6,50 +6,65 @@
     android:orientation="vertical"
     android:background="#F9EDCB">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="550dp"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/main_back" />
+
     <TextView
         android:id="@+id/textView8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
         android:fontFamily="@font/spoqahansansneo_medium"
         android:gravity="center_horizontal"
-        android:textColor="#ff568c"
-        android:text="안녕! 나는 뿌이야"
-        android:textSize="30dp" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_height="400dp"
-        app:srcCompat="@drawable/gom_hello" />
+        android:text="안녕! 오늘 나랑 뭐하고 놀래?"
+        android:textStyle="bold"
+        android:textColor="#4d662c"
+        android:textSize="22dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/trainButton"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="훈련 시작하기" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button4"
+            android:fontFamily="@font/spoqahansansneo_medium"
+            android:textColor="#4d662c"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:text="훈련 시작" />
 
         <Button
             android:id="@+id/testButton"
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:text="진단 시작하기"
-            android:textColor="@color/black"
-            android:textSize="18dp" />
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="진단 시작"
+            android:background="@drawable/button3"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/spoqahansansneo_medium"
+            android:textColor="#4d662c"
+            android:textStyle="bold"
+            android:textSize="15dp" />
 
         <Button
             android:id="@+id/myPage"
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
             android:text="마이페이지"
-            android:textColor="@color/black"
-            android:textSize="18dp" />
+            android:background="@drawable/button5"
+            android:fontFamily="@font/spoqahansansneo_medium"
+            android:textColor="#4d662c"
+            android:textStyle="bold"
+            android:textSize="15dp" />
     </LinearLayout>
 
 </LinearLayout>

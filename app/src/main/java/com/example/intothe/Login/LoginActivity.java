@@ -29,6 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText mEtEmail, mEtPwd;   // 회원가입 입력 필드
 
     public static String userName;   // 로그인 한 사용자 이름
+    public static String userId;   // 로그인 한 사용자의 아이디
 
 
     @Override
@@ -63,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
                             // 로그인 성공
                             Cursor cursor = db.rawQuery("select * from user where email = ?", new String[]{strEmail});
                             while(cursor.moveToNext()){
+                                userId = String.valueOf(cursor.getInt(0));
                                 userName = cursor.getString(1);
                             }
                             myDb.close();

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TestListAdapter extends BaseAdapter {
     Context mContext = null;
@@ -43,6 +44,10 @@ public class TestListAdapter extends BaseAdapter {
         notifyDataSetChanged();
     }
 
+    public List<TestItem> getItems() {
+        return items;
+    }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         TestItemView view = null;
@@ -55,8 +60,13 @@ public class TestListAdapter extends BaseAdapter {
         // Data Set(listViewItemList)에서 position에 위치한 데이터 참조 획득
         TestItem item = items.get(position);
 
+        view.setAnswerClickListener(answer -> {
+            item.setAnswer(answer.toString());
+        });
+
         //데이터 값 표시하기
         view.setQuestion(item.getQuestion());
+        view.setAnswer(item.getAnswer());
 
         return view;
     }

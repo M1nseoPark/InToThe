@@ -14,10 +14,10 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class TestDBHelper extends SQLiteOpenHelper {
-    static String NAME = "test.db";   // to-do*
+    static String NAME = "test1.db";   // to-do*
     static SQLiteDatabase.CursorFactory FACTORY = null;
     static String PACKEGE = "com.example.intothe"; //to-do
-    static String DB = "test.db";   // to-do*
+    static String DB = "test1.db";   // to-do*
     static int VERSION  = 1;
 
     public TestDBHelper(Context context) {

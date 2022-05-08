@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +24,24 @@ public class SettingGreet extends AppCompatActivity {
         setContentView(R.layout.setting_greet);
 
         EditText editText = (EditText) findViewById(R.id.greeting);
+        ImageButton highfive = (ImageButton) findViewById(R.id.highfive);
+        LinearLayout salute = (LinearLayout) findViewById(R.id.salute);
+
+        highfive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                highfive.setSelected(true);
+                salute.setSelected(false);
+            }
+        });
+
+        salute.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                highfive.setSelected(false);
+                salute.setSelected(true);
+            }
+        });
 
         greeting = editText.getText().toString();
         if (greeting.length() == 0) {

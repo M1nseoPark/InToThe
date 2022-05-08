@@ -68,11 +68,14 @@
         <activity
             android:name=".ChangeFace2.ChangeFace21"
             android:exported="true"/>
+        <activity android:name=".SettingGreet.StartGreet1"
+            android:exported="true"/>
+        <activity android:name=".SettingGreet.SettingGreet"
+            android:exported="true"/>
+        <activity android:name=".Test.TestResult"
+            android:exported="true"/>
         <activity
             android:name=".FaceExpand.FaceExpand1"
-            android:exported="true"></activity>
-        <activity
-            android:name=".SettingGreet.SettingGreet"
             android:exported="true"></activity>
         <activity
             android:name=".SpeakFeeling.Roulette"

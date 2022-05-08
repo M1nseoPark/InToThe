@@ -13,12 +13,13 @@ import androidx.fragment.app.Fragment;
 
 import com.example.intothe.R;
 
+import java.util.ArrayList;
+
 public class TestList extends Fragment {
     SQLiteDatabase database;
     ListView testList;
     TestListAdapter adapter;
     public static final String TAG ="TAG QuestionList.java";
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -34,7 +35,7 @@ public class TestList extends Fragment {
         // 맨 처음 초기화 데이터 보여주기 (select)
         if (database != null) {
             String tableName = "test";
-            String query = "select id, question, type from "+tableName;
+            String query = "select id, question, type, answer from "+tableName;
             Cursor cursor = database.rawQuery(query, null);
             Log.v(TAG, "조회된 데이터 수 : " + cursor.getCount());
 
@@ -43,8 +44,9 @@ public class TestList extends Fragment {
                 int id = cursor.getInt(0);
                 String question = cursor.getString(1);
                 String type = cursor.getString(2);
+                String answer = cursor.getString(3);
 
-                adapter.addItem(new TestItem(id, question, type));
+                adapter.addItem(new TestItem(id, question, type, answer));
             }
             cursor.close();
         } else {

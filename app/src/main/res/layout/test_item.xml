@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="130dp"
+    android:layout_height="150dp"
     android:orientation="vertical">
 
     <TextView
@@ -29,40 +29,125 @@
         android:layout_marginRight="20dp"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btOne"
-            android:layout_width="25dp"
-            android:layout_height="60dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/setcheck_bt_one" />
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btTwo"
-            android:layout_width="25dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="@drawable/setcheck_bt_two" />
+            <Button
+                android:id="@+id/btOne"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/setcheck_bt_one" />
 
-        <Button
-            android:id="@+id/btThree"
-            android:layout_width="25dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="@drawable/setcheck_bt_three" />
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/spoqahansansneo_medium"
+                android:gravity="center_horizontal"
+                android:textSize="13dp"
+                android:text="전혀 아니다"
+                android:textColor="#8C8C8C" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/btFour"
-            android:layout_width="25dp"
-            android:layout_height="60dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/setcheck_bt_four" />
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btFive"
-            android:layout_width="25dp"
-            android:layout_height="60dp"
+            <Button
+                android:id="@+id/btTwo"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/setcheck_bt_two" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/spoqahansansneo_medium"
+                android:gravity="center_horizontal"
+                android:textSize="13dp"
+                android:text="아니다"
+                android:textColor="#8C8C8C" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/setcheck_bt_five" />
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btThree"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/setcheck_bt_three" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/spoqahansansneo_medium"
+                android:textSize="13dp"
+                android:text="중간"
+                android:textColor="#8C8C8C" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btFour"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/setcheck_bt_four" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/spoqahansansneo_medium"
+                android:textSize="13dp"
+                android:text="그렇다"
+                android:textColor="#8C8C8C" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btFive"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/setcheck_bt_five" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/spoqahansansneo_medium"
+                android:textSize="13dp"
+                android:text="매우 그렇다"
+                android:textColor="#8C8C8C" />
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

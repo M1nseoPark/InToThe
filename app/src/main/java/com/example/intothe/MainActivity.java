@@ -10,6 +10,7 @@ import android.widget.Button;
 import com.amitshekhar.DebugDB;
 import com.example.intothe.FaceExpand.FaceExpand1;
 import com.example.intothe.MyPage.MyPage;
+import com.example.intothe.SettingGreet.StartGreet1;
 import com.example.intothe.SocialScale.SocialScale2;
 import com.example.intothe.Test.TestList;
 import com.example.intothe.Test.TestListView;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         trainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), FaceExpand1.class);
+                Intent intent = new Intent(getApplicationContext(), StartGreet1.class);
                 startActivity(intent);
             }
         });

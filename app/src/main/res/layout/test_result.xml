@@ -98,18 +98,19 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/tvMean"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
                     android:layout_marginLeft="30dp"
                     android:textColor="@color/black"
                     android:textSize="20sp"
+                    android:textStyle="bold"
                     android:fontFamily="@font/spoqahansansneo_regular"
-                    android:text="TextView" />
+                    android:text="평균 100점" />
 
                 <org.eazegraph.lib.charts.BarChart
-                    android:id="@+id/tab1_chart_2"
+                    android:id="@+id/barchart"
                     android:layout_width="match_parent"
                     android:layout_height="256dp"
                     android:layout_marginLeft="10dp"

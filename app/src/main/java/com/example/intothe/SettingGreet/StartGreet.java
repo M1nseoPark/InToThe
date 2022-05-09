@@ -10,14 +10,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.intothe.Login.LoginActivity;
 import com.example.intothe.R;
-import com.example.intothe.SocialScale.SocialScale2;
 
-public class StartGreet1 extends AppCompatActivity {
+public class StartGreet extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.start_greet_1);
+        setContentView(R.layout.start_greet);
 
         Button next = (Button) findViewById(R.id.next);
         TextView talk = (TextView) findViewById(R.id.talk);

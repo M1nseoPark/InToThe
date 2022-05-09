@@ -49,7 +49,7 @@
             android:text="인사말" />
 
         <EditText
-            android:id="@+id/greeting"
+            android:id="@+id/etGreeting"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -84,68 +84,49 @@
                 <LinearLayout
                     android:layout_width="180dp"
                     android:layout_height="290dp"
-                    android:layout_weight="1"
                     android:layout_marginLeft="50dp"
                     android:layout_marginTop="20dp"
-                    android:orientation="vertical"
-                    android:background="@color/white">
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical">
 
                     <ImageButton
                         android:id="@+id/highfive"
-                        android:layout_width="160dp"
+                        android:layout_width="145dp"
                         android:layout_height="250dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/setcheck_bt_2"
                         app:srcCompat="@drawable/gom_highfive" />
 
-                    <TextView
-                        android:id="@+id/textView10"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:layout_marginBottom="10dp"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/spoqahansansneo_regular"
-                        android:text="양손 하이파이브" />
-                </LinearLayout>
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/salute"
-                    android:layout_width="180dp"
-                    android:layout_height="290dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:background="@drawable/setcheck_bt_2">
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/spoqahansansneo_regular"
+                            android:gravity="center_horizontal"
+                            android:text="양손 하이파이브"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
 
-                    <ImageButton
-                        android:id="@+id/imageButton2"
-                        android:layout_width="160dp"
-                        android:layout_height="250dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="1"
-                        android:background="@color/white"
-                        app:srcCompat="@drawable/gom_salute" />
+                        <Button
+                            android:id="@+id/highfiveHeart"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/setcheck_bt_heart" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/textView11"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:layout_marginBottom="10dp"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/spoqahansansneo_regular"
-                        android:text="경례!" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -154,11 +135,11 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:background="@drawable/setcheck_bt">
+                    android:background="@color/white"
+                    android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/imageButton3"
+                        android:id="@+id/salute"
                         android:layout_width="160dp"
                         android:layout_height="250dp"
                         android:layout_gravity="center"
@@ -167,18 +148,34 @@
                         android:background="@color/white"
                         app:srcCompat="@drawable/gom_salute" />
 
-                    <TextView
-                        android:id="@+id/textView12"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:layout_marginBottom="10dp"
-                        android:textSize="17dp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/spoqahansansneo_regular"
-                        android:text="경례!" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/spoqahansansneo_regular"
+                            android:gravity="center_horizontal"
+                            android:text="경례!"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/saluteHeart"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/setcheck_bt_heart" />
+                    </LinearLayout>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -187,11 +184,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:background="@drawable/setcheck_bt">
+                    android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/imageButton5"
+                        android:id="@+id/salute2"
                         android:layout_width="160dp"
                         android:layout_height="250dp"
                         android:layout_gravity="center"
@@ -200,24 +196,89 @@
                         android:background="@color/white"
                         app:srcCompat="@drawable/gom_salute" />
 
-                    <TextView
-                        android:id="@+id/textView13"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:layout_marginBottom="10dp"
-                        android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/spoqahansansneo_regular"
-                        android:text="경례!" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/spoqahansansneo_regular"
+                            android:gravity="center_horizontal"
+                            android:text="경례!"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/saluteHeart2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/setcheck_bt_heart" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="290dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/setcheck_bt"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/salute3"
+                        android:layout_width="160dp"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        app:srcCompat="@drawable/gom_salute" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/spoqahansansneo_regular"
+                            android:gravity="center_horizontal"
+                            android:text="경례!"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/saluteHeart3"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/setcheck_bt_heart" />
+                    </LinearLayout>
+
                 </LinearLayout>
             </LinearLayout>
         </HorizontalScrollView>
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/finish"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"

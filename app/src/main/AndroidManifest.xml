@@ -68,11 +68,17 @@
         <activity
             android:name=".ChangeFace2.ChangeFace21"
             android:exported="true"/>
-        <activity android:name=".SettingGreet.StartGreet1"
+        <activity android:name=".SettingGreet.StartGreet"
             android:exported="true"/>
         <activity android:name=".SettingGreet.SettingGreet"
             android:exported="true"/>
         <activity android:name=".Test.TestResult"
+            android:exported="true"/>
+        <activity android:name=".SettingGreet.HighFive"
+            android:exported="true"/>
+        <activity android:name=".SettingGreet.Salute"
+            android:exported="true"/>
+        <activity android:name=".Test.EnterCode"
             android:exported="true"/>
         <activity
             android:name=".FaceExpand.FaceExpand1"

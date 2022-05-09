@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="160dp"
     android:orientation="vertical">
 
     <TextView
@@ -37,7 +37,7 @@
 
             <Button
                 android:id="@+id/btOne"
-                android:layout_width="50dp"
+                android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/setcheck_bt_one" />
@@ -61,7 +61,7 @@
 
             <Button
                 android:id="@+id/btTwo"
-                android:layout_width="50dp"
+                android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/setcheck_bt_two" />
@@ -85,7 +85,7 @@
 
             <Button
                 android:id="@+id/btThree"
-                android:layout_width="50dp"
+                android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/setcheck_bt_three" />
@@ -94,11 +94,11 @@
                 android:id="@+id/textView16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/spoqahansansneo_medium"
-                android:textSize="13dp"
+                android:gravity="center_horizontal"
                 android:text="중간"
-                android:textColor="#8C8C8C" />
+                android:textColor="#8C8C8C"
+                android:textSize="13dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -109,7 +109,7 @@
 
             <Button
                 android:id="@+id/btFour"
-                android:layout_width="50dp"
+                android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/setcheck_bt_four" />
@@ -118,11 +118,11 @@
                 android:id="@+id/textView17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/spoqahansansneo_medium"
-                android:textSize="13dp"
+                android:gravity="center_horizontal"
                 android:text="그렇다"
-                android:textColor="#8C8C8C" />
+                android:textColor="#8C8C8C"
+                android:textSize="13dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -133,7 +133,7 @@
 
             <Button
                 android:id="@+id/btFive"
-                android:layout_width="50dp"
+                android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/setcheck_bt_five" />
@@ -142,11 +142,11 @@
                 android:id="@+id/textView18"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/spoqahansansneo_medium"
-                android:textSize="13dp"
+                android:gravity="center_horizontal"
                 android:text="매우 그렇다"
-                android:textColor="#8C8C8C" />
+                android:textColor="#8C8C8C"
+                android:textSize="13dp" />
         </LinearLayout>
     </LinearLayout>
 

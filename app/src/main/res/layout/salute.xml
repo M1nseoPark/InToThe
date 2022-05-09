@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#AEDEE3">
+    android:background="#F9EDCB">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -14,24 +14,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
-            app:srcCompat="@drawable/profile"/>
+            app:srcCompat="@drawable/gom_salute_origin"/>
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="220dp"
             android:layout_gravity="bottom"
             app:srcCompat="@drawable/talkbox" />
 
         <TextView
+            android:id="@+id/tvGreeting"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_marginBottom="150dp"
+            android:layout_marginBottom="120dp"
             android:layout_marginLeft="40dp"
             android:textColor="@color/black"
             android:textSize="18dp"
-            android:text="(이름)아 나랑 한달 동안 할 특별한 인사를\n정할 시간이야!"/>
+            android:fontFamily="@font/spoqahansansneo_medium"
+            android:text="설정한 인사말"/>
 
         <Button
             android:id="@+id/next"

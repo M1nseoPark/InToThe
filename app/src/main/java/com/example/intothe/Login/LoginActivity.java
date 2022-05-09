@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.amitshekhar.DebugDB;
 import com.example.intothe.MainActivity;
 import com.example.intothe.R;
+import com.example.intothe.UserDBHelper;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;

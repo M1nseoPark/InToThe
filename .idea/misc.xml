@@ -39,10 +39,14 @@
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/change_face_21.xml" value="0.1953125" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/change_face_22.xml" value="0.1953125" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/change_face_23.xml" value="0.1953125" />
+        <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/enter_code.xml" value="0.1953125" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/face_expand_1.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/face_expand_2.xml" value="0.1953125" />
+        <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/highfive.xml" value="0.1953125" />
+        <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/intro.xml" value="0.1953125" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/log_in.xml" value="0.1953125" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/mypage.xml" value="0.1953125" />
+        <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/salute.xml" value="0.1953125" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/setting_code.xml" value="0.1953125" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/setting_greet.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/setting_greet_1.xml" value="0.19947916666666668" />
@@ -54,6 +58,7 @@
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/social_scale_3.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/social_scale_4.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/speak_feeling_2.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/start_greet.xml" value="0.1953125" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/start_greet_1.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/start_greet_2.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/test_item.xml" value="0.1953125" />

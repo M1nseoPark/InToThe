@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import com.amitshekhar.DebugDB;
 import com.example.intothe.R;
+import com.example.intothe.Test.ResultDBHelper;
+import com.example.intothe.UserDBHelper;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -38,7 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         DebugDB.getAddressLog();
 
-        // UserDB 생성
+        // UserDB, ResultDB 생성
         UserDBHelper myDb = new UserDBHelper(RegisterActivity.this);
 
         // 파이어베이스
@@ -90,7 +92,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                                 // setValue : database에 삽입
                                 mDatabaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
-                                myDb.addBook(strName, strEmail, strBirth);
+                                myDb.addBook(strName, strEmail, strBirth, null, null, null, null);
 
                                 Toast.makeText(RegisterActivity.this, "회원가입에 성공하셨습니다", Toast.LENGTH_SHORT).show();
 

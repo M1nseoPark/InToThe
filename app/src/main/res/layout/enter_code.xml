@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:passcodeView="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <ImageView
@@ -31,83 +32,31 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
+        android:layout_marginBottom="30dp"
         android:fontFamily="@font/spoqahansansneo_medium"
         android:textSize="16dp"
         android:textColor="#8C8C8C"
         android:text="마이페이지에서 설정하신 비밀번호를\n입력해주세요." />
 
 
-    <!--    <com.github.glomadrian.codeinputlib.CodeInput-->
-    <!--        android:layout_marginTop="20dp"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        app:underline_color="#457ad1"-->
-    <!--        app:underline_selected_color="#9e1ace"-->
-    <!--        app:text_color="#b12eff"-->
-    <!--        app:hint_color="#77ce9d"-->
-    <!--        app:hint_text="Pin code"-->
-    <!--        app:codes="4" />-->
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <online.devliving.passcodeview.PasscodeView
+        android:id="@+id/passcode_view2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="70dp"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/et_pwd1"
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:background="@drawable/code"
-            android:layout_marginRight="15dp"
-            android:layout_weight="1"
-            android:maxLength="1"
-            android:ems="10"
-            android:inputType="number" />
-
-        <EditText
-            android:id="@+id/et_pwd2"
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:background="@drawable/code"
-            android:layout_marginRight="15dp"
-            android:layout_weight="1"
-            android:maxLength="1"
-            android:ems="10"
-            android:inputType="number" />
-
-        <EditText
-            android:id="@+id/et_pwd3"
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:background="@drawable/code"
-            android:layout_marginRight="15dp"
-            android:layout_weight="1"
-            android:maxLength="1"
-            android:ems="10"
-            android:inputType="number" />
-
-        <EditText
-            android:id="@+id/et_pwd4"
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:background="@drawable/code"
-            android:layout_weight="1"
-            android:maxLength="1"
-            android:ems="10"
-            android:inputType="number" />
-    </LinearLayout>
+        android:layout_gravity="center_horizontal"
+        passcodeView:controlColor="#8C8C8C"
+        passcodeView:digitColorFilled="#FFBDBE"
+        passcodeView:numDigits="5"
+        android:layout_marginTop="@dimen/activity_vertical_margin" />
 
     <Button
-        android:id="@+id/save"
+        android:id="@+id/finish"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:background="@drawable/button1"
+        android:layout_marginTop="100dp"
         android:textColor="@color/white"
         android:fontFamily="@font/spoqahansansneo_regular"
         android:textStyle="bold"

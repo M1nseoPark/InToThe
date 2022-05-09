@@ -49,6 +49,8 @@ dependencies {
     implementation 'com.github.siyamed:android-shape-imageview:0.9.+@aar'   // 이미지뷰 모서리 둥글게
     debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'   // 내부 DB 확인
 
+    implementation 'online.devliving:passcodeview:1.0.3'
+
     // graph
     implementation 'com.github.blackfizz:eazegraph:1.2.2@aar'
     implementation 'com.nineoldandroids:library:2.4.0'

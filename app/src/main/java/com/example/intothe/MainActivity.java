@@ -15,6 +15,7 @@ import com.example.intothe.MyPage.MyPage;
 import com.example.intothe.SettingGreet.HighFive;
 import com.example.intothe.SettingGreet.Salute;
 import com.example.intothe.SettingGreet.StartGreet;
+import com.example.intothe.Test.EnterCode;
 import com.example.intothe.Test.ResultDBHelper;
 import com.example.intothe.Test.TestListView;
 
@@ -100,13 +101,13 @@ public class MainActivity extends AppCompatActivity {
         testButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (dateList.get(dateList.size() - 1).equals(testDate)) {
-                    Toast.makeText(MainActivity.this, "테스트는 한 달에 한 번만 할 수 있습니다.", Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    Intent intent = new Intent(getApplicationContext(), TestListView.class);
+//                if (dateList.get(dateList.size() - 1).equals(testDate)) {
+//                    Toast.makeText(MainActivity.this, "테스트는 한 달에 한 번만 할 수 있습니다.", Toast.LENGTH_SHORT).show();
+//                }
+//                else {
+                    Intent intent = new Intent(getApplicationContext(), EnterCode.class);
                     startActivity(intent);
-                }
+//                }
             }
         });
 

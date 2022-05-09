@@ -46,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
         // 현재 날짜 가져오기
         mNow = System.currentTimeMillis();
         mDate = new Date(mNow);
-        ArrayList<String> dateList = new ArrayList<String>();
+        testDate = mFormat.format(mDate);
+        ArrayList<String> dateList = new ArrayList<String>();   // 테스트를 한 날짜 리스트
 
         // db start
         UserDBHelper myDb = new UserDBHelper(MainActivity.this);
@@ -59,24 +60,26 @@ public class MainActivity extends AppCompatActivity {
             settingDate = cursor.getString(6);
         }
 
-//        ResultDBHelper myDb2 = new ResultDBHelper(MainActivity.this);
-//        SQLiteDatabase db2 = myDb2.getReadableDatabase();
-//
-//        String sql2 = "select * from result" + LoginActivity.userId;
-//        Cursor cursor2 = db2.rawQuery(sql2, null);
-//        while(cursor.moveToNext()){
-//            dateList.add(cursor.getString(1));
-//        }
+        ResultDBHelper myDb2 = new ResultDBHelper(MainActivity.this);
+        SQLiteDatabase db2 = myDb2.getReadableDatabase();
+        String sql2 = "select * from result" + LoginActivity.userId;
+        Cursor cursor2 = db2.rawQuery(sql2, null);
+
+        if (cursor2.getCount() != 0) {
+            while(cursor2.moveToNext()){
+                dateList.add(cursor2.getString(1));
+            }
+        }
 
         myDb.close();
         db.close();
-//        myDb2.close();
-//        db2.close();
+        myDb2.close();
+        db2.close();
         cursor.close();
-//        cursor2.close();
+        cursor2.close();
 
 
-        // 훈련하기 버튼
+        // 훈련하기 버튼 (한달에 한번 인사 설정하도록 했음)
         trainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,13 +104,17 @@ public class MainActivity extends AppCompatActivity {
         testButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                if (dateList.get(dateList.size() - 1).equals(testDate)) {
-//                    Toast.makeText(MainActivity.this, "테스트는 한 달에 한 번만 할 수 있습니다.", Toast.LENGTH_SHORT).show();
-//                }
-//                else {
+                if (dateList.size() == 0) {   // 테스트를 한번도 하지 않은 경우
                     Intent intent = new Intent(getApplicationContext(), EnterCode.class);
                     startActivity(intent);
-//                }
+                }
+                else if (dateList.get(dateList.size() - 1).equals(testDate)) {   // 이번달에 테스트를 이미 한 경우
+                    Toast.makeText(MainActivity.this, "테스트는 한 달에 한 번만 할 수 있습니다.", Toast.LENGTH_SHORT).show();
+                }
+                else {   // 테스트하고 한달이 지난 경우
+                    Intent intent = new Intent(getApplicationContext(), EnterCode.class);
+                    startActivity(intent);
+                }
             }
         });
 

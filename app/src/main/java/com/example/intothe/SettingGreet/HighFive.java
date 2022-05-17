@@ -10,10 +10,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.intothe.ChangeFace1.ChangeFace11;
 import com.example.intothe.ChangeFace2.ChangeFace21;
+import com.example.intothe.FaceExpand.FaceExpand1;
 import com.example.intothe.Login.LoginActivity;
 import com.example.intothe.MainActivity;
 import com.example.intothe.R;
+import com.example.intothe.SocialScale.SocialScale1;
+import com.example.intothe.SpeakFeeling.Roulette;
 import com.example.intothe.UserDBHelper;
 
 public class HighFive extends AppCompatActivity {
@@ -51,7 +55,7 @@ public class HighFive extends AppCompatActivity {
         btHand1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ChangeFace21.class);
+                Intent intent = new Intent(getApplicationContext(), Roulette.class);
                 startActivity(intent);
             }
         });
@@ -59,7 +63,7 @@ public class HighFive extends AppCompatActivity {
         btHand2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ChangeFace21.class);
+                Intent intent = new Intent(getApplicationContext(), Roulette.class);
                 startActivity(intent);
             }
         });

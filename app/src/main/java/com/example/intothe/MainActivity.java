@@ -60,23 +60,9 @@ public class MainActivity extends AppCompatActivity {
             settingDate = cursor.getString(6);
         }
 
-        ResultDBHelper myDb2 = new ResultDBHelper(MainActivity.this);
-        SQLiteDatabase db2 = myDb2.getReadableDatabase();
-        String sql2 = "select * from result" + LoginActivity.userId;
-        Cursor cursor2 = db2.rawQuery(sql2, null);
-
-        if (cursor2.getCount() != 0) {
-            while(cursor2.moveToNext()){
-                dateList.add(cursor2.getString(1));
-            }
-        }
-
         myDb.close();
         db.close();
-        myDb2.close();
-        db2.close();
         cursor.close();
-        cursor2.close();
 
 
         // 훈련하기 버튼 (한달에 한번 인사 설정하도록 했음)
@@ -104,17 +90,8 @@ public class MainActivity extends AppCompatActivity {
         testButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (dateList.size() == 0) {   // 테스트를 한번도 하지 않은 경우
-                    Intent intent = new Intent(getApplicationContext(), EnterCode.class);
-                    startActivity(intent);
-                }
-                else if (dateList.get(dateList.size() - 1).equals(testDate)) {   // 이번달에 테스트를 이미 한 경우
-                    Toast.makeText(MainActivity.this, "테스트는 한 달에 한 번만 할 수 있습니다.", Toast.LENGTH_SHORT).show();
-                }
-                else {   // 테스트하고 한달이 지난 경우
-                    Intent intent = new Intent(getApplicationContext(), EnterCode.class);
-                    startActivity(intent);
-                }
+                Intent intent = new Intent(getApplicationContext(), TestPick.class);
+                startActivity(intent);
             }
         });
 

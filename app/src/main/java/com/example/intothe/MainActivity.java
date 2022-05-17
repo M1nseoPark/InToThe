@@ -8,16 +8,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.intothe.Login.LoginActivity;
 import com.example.intothe.MyPage.MyPage;
+import com.example.intothe.SettingGreet.Cheek;
+import com.example.intothe.SettingGreet.Hi;
 import com.example.intothe.SettingGreet.HighFive;
 import com.example.intothe.SettingGreet.Salute;
 import com.example.intothe.SettingGreet.StartGreet;
-import com.example.intothe.Test.EnterCode;
-import com.example.intothe.Test.ResultDBHelper;
-import com.example.intothe.Test.TestListView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -76,6 +74,14 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else if (gesture.equals("salute")) {
                         Intent intent = new Intent(getApplicationContext(), Salute.class);
+                        startActivity(intent);
+                    }
+                    else if (gesture.equals("hi")) {
+                        Intent intent = new Intent(getApplicationContext(), Hi.class);
+                        startActivity(intent);
+                    }
+                    else if (gesture.equals("cheek")) {
+                        Intent intent = new Intent(getApplicationContext(), Cheek.class);
                         startActivity(intent);
                     }
                 }

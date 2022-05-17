@@ -184,21 +184,22 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_weight="1"
+                    android:background="@color/white"
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/salute2"
+                        android:id="@+id/cheek"
                         android:layout_width="160dp"
                         android:layout_height="250dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:background="@color/white"
-                        app:srcCompat="@drawable/gom_salute" />
+                        app:srcCompat="@drawable/gom_cheek" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="horizontal">
 
@@ -210,13 +211,13 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/spoqahansansneo_regular"
                             android:gravity="center_horizontal"
-                            android:text="경례!"
+                            android:text="볼 찌르기"
                             android:textColor="@color/black"
                             android:textSize="17dp"
                             android:textStyle="bold" />
 
                         <Button
-                            android:id="@+id/saluteHeart2"
+                            android:id="@+id/cheekHeart"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_marginRight="5dp"
@@ -232,22 +233,22 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_weight="1"
-                    android:background="@drawable/setcheck_bt"
+                    android:background="@color/white"
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/salute3"
+                        android:id="@+id/hi"
                         android:layout_width="160dp"
                         android:layout_height="250dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:background="@color/white"
-                        app:srcCompat="@drawable/gom_salute" />
+                        app:srcCompat="@drawable/gom_hi" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="horizontal">
 
@@ -259,13 +260,13 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/spoqahansansneo_regular"
                             android:gravity="center_horizontal"
-                            android:text="경례!"
+                            android:text="한손 하이파이브"
                             android:textColor="@color/black"
                             android:textSize="17dp"
                             android:textStyle="bold" />
 
                         <Button
-                            android:id="@+id/saluteHeart3"
+                            android:id="@+id/hiHeart"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_marginRight="5dp"

@@ -15,12 +15,12 @@ import com.example.intothe.R;
 import com.example.intothe.SpeakFeeling.Roulette;
 import com.example.intothe.UserDBHelper;
 
-public class HighFive extends AppCompatActivity {
+public class Cheek extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.greet_highfive);
+        setContentView(R.layout.greet_cheek);
 
         TextView tvGreeting = (TextView) findViewById(R.id.tvGreeting);
         Button btHand1 = (Button) findViewById(R.id.btHand1);
@@ -30,7 +30,7 @@ public class HighFive extends AppCompatActivity {
         String stGreeting = "";
 
         // db start
-        UserDBHelper myDb = new UserDBHelper(HighFive.this);
+        UserDBHelper myDb = new UserDBHelper(Cheek.this);
         SQLiteDatabase db = myDb.getReadableDatabase();
 
         String sql = "select * from user where _id=" + LoginActivity.userId;

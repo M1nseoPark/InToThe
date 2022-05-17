@@ -20,7 +20,7 @@ public class Salute extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.salute);
+        setContentView(R.layout.greet_salute);
 
         TextView tvGreeting = (TextView) findViewById(R.id.tvGreeting);
         Button next = (Button) findViewById(R.id.next);

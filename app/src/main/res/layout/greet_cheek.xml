@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#F9EDCB">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="160dp"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="@drawable/talkbox2" />
+
+        <TextView
+            android:id="@+id/tvGreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/spoqahansansneo_medium"
+            android:textSize="25dp"
+            android:text="TextView" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            app:srcCompat="@drawable/gom_cheek_origin"/>
+
+        <Button
+            android:id="@+id/btHand1"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:background="#00ff0000"
+            android:layout_marginTop="240dp" />
+
+        <Button
+            android:id="@+id/btHand2"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="#00ff0000"
+            android:layout_marginTop="240dp"
+            android:layout_marginLeft="260dp" />
+
+    </FrameLayout>
+
+</LinearLayout>

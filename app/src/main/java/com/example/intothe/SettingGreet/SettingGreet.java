@@ -35,8 +35,12 @@ public class SettingGreet extends AppCompatActivity {
         EditText etGreeting = (EditText) findViewById(R.id.etGreeting);
         ImageButton highfive = (ImageButton) findViewById(R.id.highfive);
         ImageButton salute = (ImageButton) findViewById(R.id.salute);
+        ImageButton hi = (ImageButton) findViewById(R.id.hi);
+        ImageButton cheek = (ImageButton) findViewById(R.id.cheek);
         Button highfiveHeart = (Button) findViewById(R.id.highfiveHeart);
         Button saluteHeart = (Button) findViewById(R.id.saluteHeart);
+        Button hiHeart = (Button) findViewById(R.id.hiHeart);
+        Button cheekHeart = (Button) findViewById(R.id.cheekHeart);
         Button finish = (Button) findViewById(R.id.finish);
 
         // db start
@@ -48,6 +52,8 @@ public class SettingGreet extends AppCompatActivity {
             public void onClick(View view) {
                 highfiveHeart.setSelected(true);
                 saluteHeart.setSelected(false);
+                hiHeart.setSelected(false);
+                cheekHeart.setSelected(false);
 
                 gesture = "highfive";
             }
@@ -58,8 +64,34 @@ public class SettingGreet extends AppCompatActivity {
             public void onClick(View view) {
                 highfiveHeart.setSelected(false);
                 saluteHeart.setSelected(true);
+                hiHeart.setSelected(false);
+                cheekHeart.setSelected(false);
 
                 gesture = "salute";
+            }
+        });
+
+        hi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                highfiveHeart.setSelected(false);
+                saluteHeart.setSelected(false);
+                hiHeart.setSelected(true);
+                cheekHeart.setSelected(false);
+
+                gesture = "hi";
+            }
+        });
+
+        cheek.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                highfiveHeart.setSelected(false);
+                saluteHeart.setSelected(false);
+                hiHeart.setSelected(false);
+                cheekHeart.setSelected(true);
+
+                gesture = "cheek";
             }
         });
 
@@ -94,8 +126,17 @@ public class SettingGreet extends AppCompatActivity {
                     if (gesture.equals("highfive")) {
                         Intent intent = new Intent(getApplicationContext(), HighFive.class);
                         startActivity(intent);
-                    } else if (gesture.equals("salute")) {
+                    }
+                    else if (gesture.equals("salute")) {
                         Intent intent = new Intent(getApplicationContext(), Salute.class);
+                        startActivity(intent);
+                    }
+                    else if (gesture.equals("hi")) {
+                        Intent intent = new Intent(getApplicationContext(), Hi.class);
+                        startActivity(intent);
+                    }
+                    else if (gesture.equals("cheek")) {
+                        Intent intent = new Intent(getApplicationContext(), Cheek.class);
                         startActivity(intent);
                     }
                 }

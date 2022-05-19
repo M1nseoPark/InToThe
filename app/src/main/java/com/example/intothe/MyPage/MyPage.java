@@ -20,6 +20,7 @@ public class MyPage extends AppCompatActivity {
 
         Button btSetting = (Button) findViewById(R.id.btSetting);
         TextView name = (TextView) findViewById(R.id.name);
+        Button btReport = (Button) findViewById(R.id.btReport);
 
         name.setText(LoginActivity.userName);
 
@@ -27,6 +28,14 @@ public class MyPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), SettingCode.class);
+                startActivity(intent);
+            }
+        });
+
+        btReport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), TestReport1.class);
                 startActivity(intent);
             }
         });

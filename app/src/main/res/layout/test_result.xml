@@ -57,7 +57,7 @@
                     android:layout_height="130dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="40dp"
-                    android:background="@drawable/circle"
+                    android:background="@drawable/circle1"
                     android:fontFamily="@font/spoqahansansneo_regular"
                     android:text="총점\n15점"
                     android:textColor="@color/white"

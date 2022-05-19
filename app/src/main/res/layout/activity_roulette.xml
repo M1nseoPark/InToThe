@@ -51,7 +51,7 @@
         android:layout_marginTop="170dp"
         android:padding="15sp"
         android:text="돌리기"
-        android:background="@drawable/circle"
+        android:background="@drawable/circle1"
         android:fontFamily="@font/spoqahansansneo_regular"
         android:textSize="14sp"
         android:textStyle="bold"

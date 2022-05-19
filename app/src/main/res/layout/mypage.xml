@@ -64,7 +64,7 @@
         android:text="보호자 비밀번호 설정" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btReport"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"

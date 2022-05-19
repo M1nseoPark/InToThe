@@ -10,9 +10,14 @@
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/drawable/button3.xml" value="0.21145833333333333" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/drawable/button4.xml" value="0.21145833333333333" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/drawable/button5.xml" value="0.21145833333333333" />
+        <entry key="..\:/Users/minseo/intothe/app/src/main/res/drawable/button6.xml" value="0.21145833333333333" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/drawable/circle.xml" value="0.215625" />
+        <entry key="..\:/Users/minseo/intothe/app/src/main/res/drawable/circle2.xml" value="0.21145833333333333" />
+        <entry key="..\:/Users/minseo/intothe/app/src/main/res/drawable/circle3.xml" value="0.21145833333333333" />
+        <entry key="..\:/Users/minseo/intothe/app/src/main/res/drawable/circle4.xml" value="0.21145833333333333" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/drawable/code.xml" value="0.21145833333333333" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/drawable/color.xml" value="0.19907407407407407" />
+        <entry key="..\:/Users/minseo/intothe/app/src/main/res/drawable/hyperlink_underline.xml" value="0.21145833333333333" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/drawable/round1.xml" value="0.21145833333333333" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/drawable/setcheck_bt.xml" value="0.19444444444444445" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/drawable/setcheck_bt_2.xml" value="0.21145833333333333" />
@@ -68,6 +73,8 @@
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/test_item.xml" value="0.1953125" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/test_list.xml" value="0.15925925925925927" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/test_list_view.xml" value="0.19427083333333334" />
+        <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/test_report.xml" value="0.1816026552868658" />
+        <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/test_report_2.xml" value="0.1953125" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/layout/test_result.xml" value="0.1953125" />
         <entry key="..\:/Users/minseo/intothe/app/src/main/res/xml/file_paths.xml" value="0.1953125" />
       </map>

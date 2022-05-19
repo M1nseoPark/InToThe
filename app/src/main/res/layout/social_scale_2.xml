@@ -37,6 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="500dp"
             android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
             android:textColor="@color/black"
             android:fontFamily="@font/spoqahansansneo_medium"
             android:textSize="18dp"

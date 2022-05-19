@@ -31,10 +31,11 @@
             android:layout_gravity="bottom"
             android:layout_marginBottom="100dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:textColor="@color/black"
             android:textSize="18dp"
             android:fontFamily="@font/spoqahansansneo_medium"
-            android:text="너가 강아지가 됐다고 상상해봐.\n잠깐 화장실에 갔다온다던 주인이 돌아오지 않아.\n춥고 배도 고프고 주변엔 처음 보는 강아지들뿐이야.\n어떨 것 같니? 강아지도 소중한 생명이고 생명을\n키운다는 것은 큰 책임감을 요구하는 일이야."/>
+            android:text="너가 강아지가 됐다고 상상해봐. 잠깐 화장실에 갔다온다던 주인이 돌아오지 않아. 춥고 배도 고프고 주변엔 처음 보는 강아지들뿐이야. 어떨 것 같니? 강아지도 소중한 생명이고 생명을 키운다는 것은 큰 책임감을 요구하는 일이야."/>
 
         <Button
             android:id="@+id/next"

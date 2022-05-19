@@ -55,7 +55,10 @@ public class Roulette extends AppCompatActivity {
     private ArrayList<String> STRINGS;
     private float initAngle = 0.0f;
     private int num_roulette;
-    public static String stResult;
+
+    public static String stResult;   // 룰렛 결과
+    public static int time = 0;   // 몇번 시도했는지
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

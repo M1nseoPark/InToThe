@@ -12,6 +12,7 @@ import com.example.intothe.R;
 import com.example.intothe.SocialScale.SocialScale2;
 
 public class SpeakFeeling2 extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

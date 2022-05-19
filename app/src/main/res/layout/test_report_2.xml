@@ -39,7 +39,7 @@
             android:text="TextView" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btFinish"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"

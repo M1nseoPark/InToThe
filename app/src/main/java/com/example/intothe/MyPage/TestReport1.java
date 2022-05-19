@@ -30,7 +30,10 @@ public class TestReport1 extends AppCompatActivity {
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView calendarView, int year, int month, int day) {
-                
+                yearR = year;
+                monthR = month + 1;
+                dayR = day;
+
                 month += 1;
                 tvDate.setText(String.format("%d월 %d일", month, day));
             }

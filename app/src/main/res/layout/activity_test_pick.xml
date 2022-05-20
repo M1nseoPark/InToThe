@@ -88,7 +88,7 @@
                 android:textColor="#8C8C8C"
                 android:textSize="17dp"
                 android:layout_marginBottom="15dp"
-                android:text="환자를 대상으로 표정 맞히기 테스트를 수행합니다. 랜덤으로 추출된 영상에 드러나는 감정을 선택합니다." />
+                android:text="환자를 대상으로 표정 맞히기 테스트를 수행합니다. 사용자가 표정을 딸기가 맞히는 것과 영상에 드러난 표정 사용자가 맞히는 것" />
 
             <Button
                 android:id="@+id/button2"

@@ -20,6 +20,9 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.intothe.R;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,6 +30,7 @@ public class SpeakFeeling2 extends AppCompatActivity {
 
     static RequestQueue requestQueue;
     public static String rcResult;   // 모델 인식 결과
+    String stStory;   // 사용자 입력 String
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +44,7 @@ public class SpeakFeeling2 extends AppCompatActivity {
         talk.setText(Roulette.stResult + "가(이) 나왔네!\n너는 언제 " + Roulette.stResult + "을(를) 느껴봤어?");
 
 
-        String stStory = etStory.getText().toString();
+        stStory = etStory.getText().toString();
 
         // 다음 화면으로 이동
         button.setOnClickListener(new View.OnClickListener() {
@@ -65,32 +69,44 @@ public class SpeakFeeling2 extends AppCompatActivity {
     }
 
 
-//    public void makeRequest() {
-//        String url = editText.getText().toString();
+    public void makeRequest() {
+        String url = "http://127.0.0.1:5000/text_sentiment/?text=" + stStory;
 
-        // 요청 객체 만들기 (요청방식, 웹사이트 주소, 응답받을 리스너 객체, 에러 발생시 호출될 리스너 객체)
-//        StringRequest request = new StringRequest(Request.Method.GET, url,
-//                new Response.Listener<String>() {
-//                    @Override
-//                    public void onResponse(String response) {
-//                        Log.v("응답-> ", response);
-//                    }
-//                },
-//                new Response.ErrorListener() {
-//                    @Override
-//                    public void onErrorResponse(VolleyError error) {
-//                        Log.v("에러-> ", error.getMessage());
-//                    }
-//                }) {
-//            @Override
-//            protected Map<String, String> getParams() throws AuthFailureError {
-//                Map<String, String> params = new HashMap<String, String>();
-//
-//                return params;
-//            }
-//        };
-//        request.setShouldCache(false);   // 이전 응답 결과를 사용하지 않겠다면
-//        requestQueue.add(request);   // 요청 객체를 큐에 넣어줌
-//        Log.v("requestQueue", "요청 보냄");
-//    }
+//      요청 객체 만들기 (요청방식, 웹사이트 주소, 응답받을 리스너 객체, 에러 발생시 호출될 리스너 객체)
+        StringRequest request = new StringRequest(Request.Method.GET, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.v("응답-> ", response);
+
+                        pressResponse(response);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.v("에러-> ", error.getMessage());
+                    }
+                }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<String, String>();
+
+                return params;
+            }
+        };
+        request.setShouldCache(false);   // 이전 응답 결과를 사용하지 않겠다면
+        requestQueue.add(request);   // 요청 객체를 큐에 넣어줌
+        Log.v("requestQueue", "요청 보냄");
+    }
+
+    public void pressResponse(String response) {
+        try {
+            JSONObject Object = new JSONObject(response);
+            stStory = Object.getString("result");
+        }
+        catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
 }

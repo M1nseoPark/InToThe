@@ -1,5 +1,7 @@
 package com.example.intothe.SpeakFeeling;
 
+import static com.example.intothe.SpeakFeeling.SpeakFeeling2.rcResult;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +17,6 @@ import com.example.intothe.SocialScale.SocialScale1;
 
 public class SpeakFeeling3 extends AppCompatActivity {
 
-    public static String rcResult;   // 모델 인식 결과
     boolean move;   // 이동할 페이지 (true은 다음 훈련, false은 입력필드)
 
     @Override
@@ -219,7 +220,7 @@ public class SpeakFeeling3 extends AppCompatActivity {
                 }
             }
         }
-        
+
 
         // 다음 페이지로 이동
         next.setOnClickListener(new View.OnClickListener() {

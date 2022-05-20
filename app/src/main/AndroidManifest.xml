@@ -50,7 +50,7 @@
             android:name=".SocialScale.SocialScale4"
             android:exported="true" />
         <activity
-            android:name=".FaceExpand.PhotoActivity"
+            android:name=".PhotoActivity"
             android:exported="true" />
         <activity
             android:name=".SpeakFeeling.SpeakFeeling2"
@@ -80,10 +80,10 @@
             android:name=".Test.TestResult"
             android:exported="true" />
         <activity
-            android:name=".SettingGreet.HighFive"
+            android:name=".SettingGreet.GreetHighFive"
             android:exported="true" />
         <activity
-            android:name=".SettingGreet.Salute"
+            android:name=".SettingGreet.GreetSalute"
             android:exported="true" />
         <activity
             android:name=".Test.EnterCode"

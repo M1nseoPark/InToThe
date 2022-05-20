@@ -11,10 +11,10 @@ import android.widget.Button;
 
 import com.example.intothe.Login.LoginActivity;
 import com.example.intothe.MyPage.MyPage;
-import com.example.intothe.SettingGreet.Cheek;
-import com.example.intothe.SettingGreet.Hi;
-import com.example.intothe.SettingGreet.HighFive;
-import com.example.intothe.SettingGreet.Salute;
+import com.example.intothe.SettingGreet.GreetCheek;
+import com.example.intothe.SettingGreet.GreetHi;
+import com.example.intothe.SettingGreet.GreetHighFive;
+import com.example.intothe.SettingGreet.GreetSalute;
 import com.example.intothe.SettingGreet.StartGreet;
 
 import java.text.SimpleDateFormat;
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     Date mDate;
     SimpleDateFormat mFormat = new SimpleDateFormat("yyyy-MM");
 
+    public static String photoMode;
     String testDate;
     String settingDate;
     String gesture;
@@ -69,19 +70,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (mFormat.format(mDate).equals(settingDate)) {
                     if (gesture.equals("highfive")) {
-                        Intent intent = new Intent(getApplicationContext(), HighFive.class);
+                        Intent intent = new Intent(getApplicationContext(), GreetHighFive.class);
                         startActivity(intent);
                     }
                     else if (gesture.equals("salute")) {
-                        Intent intent = new Intent(getApplicationContext(), Salute.class);
+                        Intent intent = new Intent(getApplicationContext(), GreetSalute.class);
                         startActivity(intent);
                     }
                     else if (gesture.equals("hi")) {
-                        Intent intent = new Intent(getApplicationContext(), Hi.class);
+                        Intent intent = new Intent(getApplicationContext(), GreetHi.class);
                         startActivity(intent);
                     }
                     else if (gesture.equals("cheek")) {
-                        Intent intent = new Intent(getApplicationContext(), Cheek.class);
+                        Intent intent = new Intent(getApplicationContext(), GreetCheek.class);
                         startActivity(intent);
                     }
                 }

@@ -10,26 +10,26 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.intothe.ChangeFace2.ChangeFace21;
 import com.example.intothe.Login.LoginActivity;
 import com.example.intothe.R;
-import com.example.intothe.SpeakFeeling.Roulette;
 import com.example.intothe.UserDBHelper;
 
-public class Hi extends AppCompatActivity {
+public class GreetSalute extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.greet_hi);
+        setContentView(R.layout.greet_salute);
 
         TextView tvGreeting = (TextView) findViewById(R.id.tvGreeting);
-        Button btHand = (Button) findViewById(R.id.btHand);
+        Button next = (Button) findViewById(R.id.next);
 
 
         String stGreeting = "";
 
         // db start
-        UserDBHelper myDb = new UserDBHelper(Hi.this);
+        UserDBHelper myDb = new UserDBHelper(GreetSalute.this);
         SQLiteDatabase db = myDb.getReadableDatabase();
 
         String sql = "select * from user where _id=" + LoginActivity.userId;
@@ -46,10 +46,10 @@ public class Hi extends AppCompatActivity {
         // 인사 진행
         tvGreeting.setText(stGreeting);
 
-        btHand.setOnClickListener(new View.OnClickListener() {
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Roulette.class);
+                Intent intent = new Intent(getApplicationContext(), ChangeFace21.class);
                 startActivity(intent);
             }
         });

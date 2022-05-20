@@ -10,26 +10,27 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.intothe.ChangeFace2.ChangeFace21;
 import com.example.intothe.Login.LoginActivity;
 import com.example.intothe.R;
+import com.example.intothe.SpeakFeeling.Roulette;
 import com.example.intothe.UserDBHelper;
 
-public class Salute extends AppCompatActivity {
+public class GreetHighFive extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.greet_salute);
+        setContentView(R.layout.greet_highfive);
 
         TextView tvGreeting = (TextView) findViewById(R.id.tvGreeting);
-        Button next = (Button) findViewById(R.id.next);
+        Button btHand1 = (Button) findViewById(R.id.btHand1);
+        Button btHand2 = (Button) findViewById(R.id.btHand2);
 
 
         String stGreeting = "";
 
         // db start
-        UserDBHelper myDb = new UserDBHelper(Salute.this);
+        UserDBHelper myDb = new UserDBHelper(GreetHighFive.this);
         SQLiteDatabase db = myDb.getReadableDatabase();
 
         String sql = "select * from user where _id=" + LoginActivity.userId;
@@ -46,10 +47,18 @@ public class Salute extends AppCompatActivity {
         // 인사 진행
         tvGreeting.setText(stGreeting);
 
-        next.setOnClickListener(new View.OnClickListener() {
+        btHand1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ChangeFace21.class);
+                Intent intent = new Intent(getApplicationContext(), Roulette.class);
+                startActivity(intent);
+            }
+        });
+
+        btHand2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Roulette.class);
                 startActivity(intent);
             }
         });

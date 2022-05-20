@@ -124,19 +124,19 @@ public class SettingGreet extends AppCompatActivity {
 
 
                     if (gesture.equals("highfive")) {
-                        Intent intent = new Intent(getApplicationContext(), HighFive.class);
+                        Intent intent = new Intent(getApplicationContext(), GreetHighFive.class);
                         startActivity(intent);
                     }
                     else if (gesture.equals("salute")) {
-                        Intent intent = new Intent(getApplicationContext(), Salute.class);
+                        Intent intent = new Intent(getApplicationContext(), GreetSalute.class);
                         startActivity(intent);
                     }
                     else if (gesture.equals("hi")) {
-                        Intent intent = new Intent(getApplicationContext(), Hi.class);
+                        Intent intent = new Intent(getApplicationContext(), GreetHi.class);
                         startActivity(intent);
                     }
                     else if (gesture.equals("cheek")) {
-                        Intent intent = new Intent(getApplicationContext(), Cheek.class);
+                        Intent intent = new Intent(getApplicationContext(), GreetCheek.class);
                         startActivity(intent);
                     }
                 }

@@ -8,25 +8,30 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.intothe.FaceExpand.PhotoActivity;
+import com.example.intothe.MainActivity;
+import com.example.intothe.PhotoActivity;
 import com.example.intothe.R;
 
 import java.util.Random;
 
 public class ChangeFace11 extends AppCompatActivity {
 
+    public static String stResult;   // 선택 결과
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.change_face_11);
 
+        MainActivity.photoMode = "ChangeFace";   // PhotoActivity에서 화면 이동을 위해 기록
         TextView feeling = (TextView) findViewById(R.id.feeling);
 
         String[] FeelList = {"분노", "혐오", "두려움", "기쁨", "슬픔", "놀람"};
         Random random = new Random();
         int pick = random.nextInt(FeelList.length - 1);
 
-        feeling.setText(FeelList[pick]);
+        stResult = FeelList[pick];
+        feeling.setText(stResult);
 
         ImageView btn_photo = (ImageView) findViewById(R.id.btn_photo);
         btn_photo.setOnClickListener(new View.OnClickListener() {

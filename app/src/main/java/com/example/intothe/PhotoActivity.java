@@ -1,11 +1,11 @@
-package com.example.intothe.FaceExpand;
+package com.example.intothe;
+
+import static com.example.intothe.MainActivity.photoMode;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.ImageDecoder;
 import android.net.Uri;
 import android.os.Build;
@@ -18,12 +18,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.FileProvider;
 
-import com.example.intothe.R;
+import com.example.intothe.ChangeFace1.ChangeFace12;
+import com.example.intothe.FaceExpand.FaceExpand1;
 
 import java.io.File;
 import java.io.IOException;
@@ -44,7 +44,7 @@ public class PhotoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo);
         iv_photo = findViewById(R.id.iv_photo);
-//        btn_photo = findViewById(R.id.btn_photo);
+        btn_photo = findViewById(R.id.btn_photo);
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if(checkSelfPermission(android.Manifest.permission.CAMERA) ==
@@ -62,15 +62,19 @@ public class PhotoActivity extends AppCompatActivity {
 
         dispatchTakePictureIntent();
 
-//        btn_photo.setOnClickListener(new View.OnClickListener() {
-//            @Override public void onClick(View v) {
-//                switch (v.getId()) {
-//                    case R.id.btn_photo:
-//                        dispatchTakePictureIntent();
-//                        break;
-//                }
-//            }
-//        });
+        btn_photo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (photoMode.equals("FaceExpand")) {
+                    Intent intent = new Intent(getApplicationContext(), FaceExpand1.class);
+                    startActivity(intent);
+                }
+                else if (photoMode.equals("ChangeFace")) {
+                    Intent intent = new Intent(getApplicationContext(), ChangeFace12.class);
+                    startActivity(intent);
+                }
+            }
+        });
     }
 
     // 권한 요청

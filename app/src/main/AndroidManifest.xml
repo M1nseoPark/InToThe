@@ -88,9 +88,11 @@
         <activity
             android:name=".Test.EnterCode"
             android:exported="true" />
-        <activity android:name=".MyPage.TestReport1"
+        <activity android:name=".MyPage.TrainReport1"
             android:exported="true" />
-        <activity android:name=".MyPage.TestReport2"
+        <activity android:name=".MyPage.TrainReport2"
+            android:exported="true" />
+        <activity android:name=".ChangeFace1.ChangeFace12"
             android:exported="true" />
         <activity
             android:name=".FaceExpand.FaceExpand1"

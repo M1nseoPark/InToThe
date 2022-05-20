@@ -64,7 +64,7 @@
         android:text="보호자 비밀번호 설정" />
 
     <Button
-        android:id="@+id/btReport"
+        android:id="@+id/btTrainReport"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
@@ -79,7 +79,7 @@
         android:text="훈련 기록" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/btTestReport"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"

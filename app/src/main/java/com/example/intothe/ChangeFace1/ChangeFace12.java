@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.intothe.ChangeFace2.ChangeFace21;
 import com.example.intothe.R;
+import com.example.intothe.TestPick;
 
 public class ChangeFace12 extends AppCompatActivity {
 
@@ -31,6 +32,7 @@ public class ChangeFace12 extends AppCompatActivity {
         // 맞았을 때
         if (rcResult.equals(stResult)) {
             gom.setImageResource(R.drawable.gom_happy);
+            TestPick.right += 1;
 
             if (stResult.equals("분노") || stResult.equals("혐오") || stResult.equals("두려움") || stResult.equals("슬픔")) {
                 tvFeedback.setText("정답이야!" + stResult + "를 표현할 수 있는 너가 너무 자랑스러워!\n그런데 혹시 나쁜 일이 있는 건 아니지?");
@@ -46,6 +48,7 @@ public class ChangeFace12 extends AppCompatActivity {
         else {
             gom.setImageResource(R.drawable.gom_sad);
             tvFeedback.setText("땡! 너의 표정은 '" + rcResult + "'(이)야\n다음에 다시 도전해보자");
+            TestPick.wrong += 1;
         }
 
 

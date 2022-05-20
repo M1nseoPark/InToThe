@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.intothe.R;
 
-public class TestReport1 extends AppCompatActivity {
+public class TrainReport1 extends AppCompatActivity {
 
     public static int yearR;
     public static int monthR;
@@ -20,7 +20,7 @@ public class TestReport1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.test_report_1);
+        setContentView(R.layout.train_report_1);
 
         CalendarView calendarView = findViewById(R.id.calendarView);
         TextView tvDate = findViewById(R.id.tvDate);
@@ -44,7 +44,7 @@ public class TestReport1 extends AppCompatActivity {
         tvDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), TestReport2.class);
+                Intent intent = new Intent(getApplicationContext(), TrainReport2.class);
                 startActivity(intent);
             }
         });

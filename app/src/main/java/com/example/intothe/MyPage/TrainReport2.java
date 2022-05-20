@@ -1,7 +1,7 @@
 package com.example.intothe.MyPage;
 
-import static com.example.intothe.MyPage.TestReport1.dayR;
-import static com.example.intothe.MyPage.TestReport1.monthR;
+import static com.example.intothe.MyPage.TrainReport1.dayR;
+import static com.example.intothe.MyPage.TrainReport1.monthR;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,12 +13,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.intothe.R;
 
-public class TestReport2 extends AppCompatActivity {
+public class TrainReport2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.test_report_2);
+        setContentView(R.layout.train_report_2);
 
         TextView tvDate = (TextView) findViewById(R.id.tvDate);
         Button btFinish = (Button) findViewById(R.id.btFinish);
@@ -28,7 +28,7 @@ public class TestReport2 extends AppCompatActivity {
         btFinish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), TestReport1.class);
+                Intent intent = new Intent(getApplicationContext(), TrainReport1.class);
                 startActivity(intent);
             }
         });

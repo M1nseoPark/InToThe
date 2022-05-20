@@ -20,7 +20,8 @@ public class MyPage extends AppCompatActivity {
 
         Button btSetting = (Button) findViewById(R.id.btSetting);
         TextView name = (TextView) findViewById(R.id.name);
-        Button btReport = (Button) findViewById(R.id.btReport);
+        Button btTrainReport = (Button) findViewById(R.id.btTrainReport);
+        Button btTestReport = (Button) findViewById(R.id.btTestReport);
 
         name.setText(LoginActivity.userName);
 
@@ -32,10 +33,18 @@ public class MyPage extends AppCompatActivity {
             }
         });
 
-        btReport.setOnClickListener(new View.OnClickListener() {
+        btTrainReport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), TestReport1.class);
+                Intent intent = new Intent(getApplicationContext(), TrainReport1.class);
+                startActivity(intent);
+            }
+        });
+
+        btTestReport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), TestReport.class);
                 startActivity(intent);
             }
         });

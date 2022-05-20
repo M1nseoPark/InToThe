@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.intothe.ChangeFace2.ChangeFace21;
+import com.example.intothe.ChangeFace1.ChangeFace11;
 import com.example.intothe.Login.LoginActivity;
 import com.example.intothe.Test.EnterCode;
 import com.example.intothe.Test.ResultDBHelper;
@@ -20,6 +20,9 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class TestPick extends AppCompatActivity {
+
+    public static int right;   // 표정 맞히기 맞은 개수
+    public static int wrong;   // 표정 맞히기 틀린 개수
 
     long mNow;
     Date mDate;
@@ -35,11 +38,15 @@ public class TestPick extends AppCompatActivity {
         Button button = findViewById(R.id.button);
         Button button2 = findViewById(R.id.button2);
 
+
         // 현재 날짜 가져오기
         mNow = System.currentTimeMillis();
         mDate = new Date(mNow);
         testDate = mFormat.format(mDate);
         ArrayList<String> dateList = new ArrayList<String>();   // 테스트를 한 날짜 리스트
+
+        right = 0;
+        wrong = 0;
 
 
         ResultDBHelper myDb2 = new ResultDBHelper(TestPick.this);
@@ -79,7 +86,7 @@ public class TestPick extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ChangeFace21.class);
+                Intent intent = new Intent(getApplicationContext(), ChangeFace11.class);
                 startActivity(intent);
             }
         });

@@ -3,6 +3,7 @@ package com.example.intothe.SpeakFeeling;
 import static com.example.intothe.SpeakFeeling.SpeakFeeling2.rcResult;
 
 import android.content.Intent;
+import android.media.FaceDetector;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,9 +12,12 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.intothe.FaceExpand.FaceExpand1;
 import com.example.intothe.Login.LoginActivity;
+import com.example.intothe.MainActivity;
 import com.example.intothe.R;
 import com.example.intothe.SocialScale.SocialScale1;
+import com.example.intothe.TrainEnd;
 
 public class SpeakFeeling3 extends AppCompatActivity {
 
@@ -227,8 +231,18 @@ public class SpeakFeeling3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (move) {
-                    Intent intent = new Intent(getApplicationContext(), SocialScale1.class);
-                    startActivity(intent);
+                    if (MainActivity.mode == 0) {
+                        Intent intent = new Intent(getApplicationContext(), FaceExpand1.class);
+                        startActivity(intent);
+                    }
+                    else if (MainActivity.mode == 1) {
+                        Intent intent = new Intent(getApplicationContext(), TrainEnd.class);
+                        startActivity(intent);
+                    }
+                    else if (MainActivity.mode == 2) {
+                        Intent intent = new Intent(getApplicationContext(), FaceExpand1.class);
+                        startActivity(intent);
+                    }
                 }
                 else {
                     Intent intent = new Intent(getApplicationContext(), SpeakFeeling2.class);

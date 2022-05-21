@@ -9,10 +9,11 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.intothe.ChangeFace2.ChangeFace21;
-import com.example.intothe.ChangeFace2.ChangeFace22;
 import com.example.intothe.Login.LoginActivity;
+import com.example.intothe.MainActivity;
 import com.example.intothe.R;
+import com.example.intothe.SpeakFeeling.Roulette;
+import com.example.intothe.TrainEnd;
 
 public class SocialScale4 extends AppCompatActivity {
 
@@ -55,6 +56,20 @@ public class SocialScale4 extends AppCompatActivity {
                     SocialScale1.number += 1;
                     Intent intent = new Intent(getApplicationContext(), SocialScale2.class);
                     startActivity(intent);
+                }
+                else {
+                    if (MainActivity.mode == 0) {
+                        Intent intent = new Intent(getApplicationContext(), TrainEnd.class);
+                        startActivity(intent);
+                    }
+                    else if (MainActivity.mode == 1) {
+                        Intent intent = new Intent(getApplicationContext(), Roulette.class);
+                        startActivity(intent);
+                    }
+                    else if (MainActivity.mode == 2) {
+                        Intent intent = new Intent(getApplicationContext(), Roulette.class);
+                        startActivity(intent);
+                    }
                 }
             }
         });

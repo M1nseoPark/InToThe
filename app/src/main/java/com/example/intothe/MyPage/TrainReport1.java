@@ -30,16 +30,16 @@ public class TrainReport1 extends AppCompatActivity {
     public static int monthR;
     public static int dayR;
 
-    String trainDate;
-    String trainName1;
+    public static String trainDate;
+    public static String trainName1;
     String trainSpecial1;
-    String trainContent1;
-    String trainName2;
+    public static String trainContent1;
+    public static String trainName2;
     String trainSpecial2;
-    String trainContent2;
-    String trainName3;
+    public static String trainContent2;
+    public static String trainName3;
     String trainSpecial3;
-    String trainContent3;
+    public static String trainContent3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,7 +131,17 @@ public class TrainReport1 extends AppCompatActivity {
                     else if (trainSpecial3.equals("true")) {
                         ivTrain3.setImageResource(R.drawable.circle4);
                     }
+
+                    // 자세한 보고서로 이동
+                    tvDetail.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(getApplicationContext(), TrainReport2.class);
+                            startActivity(intent);
+                        }
+                    });
                 }
+
                 // 날짜에 대한 훈련 기록이 없을 경우
                 else {
                     llTrain1.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -145,16 +155,6 @@ public class TrainReport1 extends AppCompatActivity {
                     tvTrain2.setText("");
                     tvTrain3.setText("");
                 }
-            }
-        });
-
-
-        // 자세한 보고서로 이동
-        tvDetail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), TrainReport2.class);
-                startActivity(intent);
             }
         });
     }

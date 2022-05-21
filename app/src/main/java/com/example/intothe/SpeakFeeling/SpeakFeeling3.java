@@ -3,7 +3,7 @@ package com.example.intothe.SpeakFeeling;
 import static com.example.intothe.SpeakFeeling.SpeakFeeling2.rcResult;
 
 import android.content.Intent;
-import android.media.FaceDetector;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,7 +16,8 @@ import com.example.intothe.FaceExpand.FaceExpand1;
 import com.example.intothe.Login.LoginActivity;
 import com.example.intothe.MainActivity;
 import com.example.intothe.R;
-import com.example.intothe.SocialScale.SocialScale1;
+import com.example.intothe.ReportDBHelper;
+import com.example.intothe.SocialScale.SocialScale4;
 import com.example.intothe.TrainEnd;
 
 public class SpeakFeeling3 extends AppCompatActivity {
@@ -31,6 +32,11 @@ public class SpeakFeeling3 extends AppCompatActivity {
         ImageView gom = (ImageView) findViewById(R.id.gom);
         TextView tvFeedback = (TextView) findViewById(R.id.tvFeedback);
         Button next = (Button) findViewById(R.id.next);
+
+
+        // db start
+        ReportDBHelper myDb = new ReportDBHelper(SpeakFeeling3.this);
+        SQLiteDatabase db = myDb.getWritableDatabase();
 
 
         // 슬픔
@@ -61,6 +67,7 @@ public class SpeakFeeling3 extends AppCompatActivity {
                     tvFeedback.setText("너가 말한 감정은 '슬픔'이 아니라 '" + rcResult + "'야!\n오늘 부모님과 함께 슬픔에 대해서 이야기 해보면 좋을 것 같아!");
 
                     move = true;
+                    Roulette.special = "false";
                 }
             }
         }
@@ -93,6 +100,7 @@ public class SpeakFeeling3 extends AppCompatActivity {
                     tvFeedback.setText("너가 말한 감정은 '놀람'이 아니라 '" + rcResult + "'야!\n오늘 부모님과 함께 놀람에 대해서 이야기 해보면 좋을 것 같아!");
 
                     move = true;
+                    Roulette.special = "false";
                 }
             }
         }
@@ -125,6 +133,7 @@ public class SpeakFeeling3 extends AppCompatActivity {
                     tvFeedback.setText("너가 말한 감정은 '분노'가 아니라 '" + rcResult + "'야!\n오늘 부모님과 함께 분노에 대해서 이야기 해보면 좋을 것 같아!");
 
                     move = true;
+                    Roulette.special = "false";
                 }
             }
         }
@@ -157,6 +166,7 @@ public class SpeakFeeling3 extends AppCompatActivity {
                     tvFeedback.setText("너가 말한 감정은 '기쁨'이 아니라 '" + rcResult + "'야!\n오늘 부모님과 함께 기쁨에 대해서 이야기 해보면 좋을 것 같아!");
 
                     move = true;
+                    Roulette.special = "false";
                 }
             }
         }
@@ -189,6 +199,7 @@ public class SpeakFeeling3 extends AppCompatActivity {
                     tvFeedback.setText("너가 말한 감정은 '혐오'가 아니라 '" + rcResult + "'야!\n오늘 부모님과 함께 혐오에 대해서 이야기 해보면 좋을 것 같아!");
 
                     move = true;
+                    Roulette.special = "false";
                 }
             }
         }
@@ -221,6 +232,7 @@ public class SpeakFeeling3 extends AppCompatActivity {
                     tvFeedback.setText("너가 말한 감정은 '두려움'이 아니라 '" + rcResult + "'야!\n오늘 부모님과 함께 두려움에 대해서 이야기 해보면 좋을 것 같아!");
 
                     move = true;
+                    Roulette.special = "false";
                 }
             }
         }
@@ -231,6 +243,26 @@ public class SpeakFeeling3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (move) {
+                    Roulette.report += "위와 같이 " + LoginActivity.userId + "님은 " + Roulette.time + "번의 시도를 하셨습니다";
+                    if (!Roulette.special.equals("false")) {
+                        Roulette.special = "true";
+                    }
+
+                    // 훈련보고서 db에 기록
+//                    if (MainActivity.mode == 0) {
+//                        db.execSQL("UPDATE report" + LoginActivity.userId + " SET trainSpecial1='" + Roulette.special + "' WHERE trainDate='" + MainActivity.trainDate + "';");
+//                        db.execSQL("UPDATE report" + LoginActivity.userId + " SET trainContent1='" + Roulette.report + "' WHERE trainDate='" + MainActivity.trainDate + "';");
+//                    }
+//                    else if (MainActivity.mode == 1) {
+//                        db.execSQL("UPDATE report" + LoginActivity.userId + " SET trainSpecial3='" + Roulette.special + "' WHERE trainDate='" + MainActivity.trainDate + "';");
+//                        db.execSQL("UPDATE report" + LoginActivity.userId + " SET trainContent3='" + Roulette.report + "' WHERE trainDate='" + MainActivity.trainDate + "';");
+//                    }
+//                    else if (MainActivity.mode == 2) {
+//                        db.execSQL("UPDATE report" + LoginActivity.userId + " SET trainSpecial2='" + Roulette.special + "' WHERE trainDate='" + MainActivity.trainDate + "';");
+//                        db.execSQL("UPDATE report" + LoginActivity.userId + " SET trainContent2='" + Roulette.report + "' WHERE trainDate='" + MainActivity.trainDate + "';");
+//                    }
+
+                    // 다음 훈련으로 이동
                     if (MainActivity.mode == 0) {
                         Intent intent = new Intent(getApplicationContext(), FaceExpand1.class);
                         startActivity(intent);

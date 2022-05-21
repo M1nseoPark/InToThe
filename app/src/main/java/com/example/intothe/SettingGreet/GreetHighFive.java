@@ -50,17 +50,17 @@ public class GreetHighFive extends AppCompatActivity {
 
 
         // 훈련 랜덤 선택
-        Random random = new Random();
-        MainActivity.mode = random.nextInt(2);
-        if (MainActivity.mode == 0) {
-            myDb2.addBook(trainDate, "감정 말하기", null, null, "얼굴 확대하기", null, null, "사회성 척도", null, null);
-        }
-        else if (MainActivity.mode == 1) {
-            myDb2.addBook(trainDate, "얼굴 확대하기", null, null, "사회성 척도", null, null, "감정 말하기", null, null);
-        }
-        else if (MainActivity.mode == 2) {
-            myDb2.addBook(trainDate, "사회성 척도", null, null, "감정 말하기", null, null, "얼굴 확대하기", null, null);
-        }
+//        Random random = new Random();
+//        MainActivity.mode = random.nextInt(2);
+//        if (MainActivity.mode == 0) {
+//            myDb2.addBook(trainDate, "감정 말하기", null, null, "얼굴 확대하기", null, null, "사회성 척도", null, null);
+//        }
+//        else if (MainActivity.mode == 1) {
+//            myDb2.addBook(trainDate, "얼굴 확대하기", null, null, "사회성 척도", null, null, "감정 말하기", null, null);
+//        }
+//        else if (MainActivity.mode == 2) {
+//            myDb2.addBook(trainDate, "사회성 척도", null, null, "감정 말하기", null, null, "얼굴 확대하기", null, null);
+//        }
 
 //        myDb2.addBook("2022-05-05", "사회성 척도", "false", null, "감정 말하기", "true", null, "얼굴 확대하기", "true", null);
 
@@ -76,18 +76,20 @@ public class GreetHighFive extends AppCompatActivity {
         btHand1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (MainActivity.mode == 0) {
-                    Intent intent = new Intent(getApplicationContext(), Roulette.class);
-                    startActivity(intent);
-                }
-                else if (MainActivity.mode == 1) {
-                    Intent intent = new Intent(getApplicationContext(), FaceExpand1.class);
-                    startActivity(intent);
-                }
-                else if (MainActivity.mode == 2) {
-                    Intent intent = new Intent(getApplicationContext(), SocialScale1.class);
-                    startActivity(intent);
-                }
+//                if (MainActivity.mode == 0) {
+//                    Intent intent = new Intent(getApplicationContext(), Roulette.class);
+//                    startActivity(intent);
+//                }
+//                else if (MainActivity.mode == 1) {
+//                    Intent intent = new Intent(getApplicationContext(), FaceExpand1.class);
+//                    startActivity(intent);
+//                }
+//                else if (MainActivity.mode == 2) {
+//                    Intent intent = new Intent(getApplicationContext(), SocialScale1.class);
+//                    startActivity(intent);
+//                }
+                Intent intent = new Intent(getApplicationContext(), SocialScale1.class);
+                startActivity(intent);
             }
         });
 

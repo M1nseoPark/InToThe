@@ -19,6 +19,8 @@ public class SocialScale1 extends AppCompatActivity {
 
     public static ArrayList<Integer> pick = new ArrayList<Integer>();
     public static int number = 0;
+    public static String report;   // 훈련 보고서에 들어갈 내용
+    public static String special;   // 훈련 보고서에 들어갈 내용
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,9 @@ public class SocialScale1 extends AppCompatActivity {
 
         Button button = (Button) findViewById(R.id.next);
         TextView talk = (TextView) findViewById(R.id.talk);
+
+        report = "";
+        special = "";
 
         talk.setText(LoginActivity.userName.substring(1,3) + "아(야) 내가 몇 가지 이야기를 해줄게.\n너는 내 이야기를 듣고 두 가지 단어 중\n어느 쪽에 얼마나 가깝다고 생각하는지\n표시해줘!");
 

@@ -46,7 +46,6 @@ import nl.dionsegijn.konfetti.models.Size;
 public class Roulette extends AppCompatActivity {
     private CircleManager circleManager;
     private RelativeLayout layoutRoulette;
-    public KonfettiView konfettiView;
 
     private Button btnRotate;
     public static TextView result;
@@ -58,6 +57,8 @@ public class Roulette extends AppCompatActivity {
 
     public static String stResult;   // 룰렛 결과
     public static int time = 0;   // 몇번 시도했는지
+    public static String report;   // 훈련 보고서에 들어갈 내용
+    public static String special;   // 훈련 보고서에 들어갈 내용
 
 
     @Override
@@ -65,7 +66,6 @@ public class Roulette extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_roulette);
 
-        konfettiView = findViewById(R.id.viewKonfetti);
         number = 6;
         result = findViewById(R.id.result);
         btnRotate = findViewById(R.id.btnRotate);
@@ -96,6 +96,7 @@ public class Roulette extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "룰렛을 먼저 돌려주세요", Toast.LENGTH_SHORT).show();
                 }
                 else {
+                    report += "'" + stResult + "'감정에 대해 이야기 하였습니다\n";
                     Intent intent = new Intent(getApplicationContext(), SpeakFeeling2.class);
                     startActivity(intent);
                 }

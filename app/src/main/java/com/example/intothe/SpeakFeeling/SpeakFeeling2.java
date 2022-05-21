@@ -55,7 +55,7 @@ public class SpeakFeeling2 extends AppCompatActivity {
                 }
                 else {
 //                    makeRequest();
-
+                    Roulette.report += "입력: " + etStory + "\n";
                     Intent intent = new Intent(getApplicationContext(), SpeakFeeling3.class);
                     startActivity(intent);
                 }

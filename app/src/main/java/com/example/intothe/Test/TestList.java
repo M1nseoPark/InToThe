@@ -13,8 +13,6 @@ import androidx.fragment.app.Fragment;
 
 import com.example.intothe.R;
 
-import java.util.ArrayList;
-
 public class TestList extends Fragment {
     SQLiteDatabase database;
     ListView testList;

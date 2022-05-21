@@ -94,6 +94,8 @@
             android:exported="true" />
         <activity android:name=".ChangeFace1.ChangeFace12"
             android:exported="true" />
+        <activity android:name=".FaceExpand.FaceExpand2"
+            android:exported="true" />
         <activity
             android:name=".FaceExpand.FaceExpand1"
             android:exported="true">

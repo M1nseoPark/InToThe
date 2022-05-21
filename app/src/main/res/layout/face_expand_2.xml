@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#F9EDCB">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/gom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            app:srcCompat="@drawable/gom_wonder"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_gravity="bottom"
+            app:srcCompat="@drawable/talkbox" />
+
+        <TextView
+            android:id="@+id/tvFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="530dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/spoqahansansneo_medium"
+            android:textSize="18dp"
+            android:text="(이름)이의 예쁜 두 눈을 찍었구나!\n호기심에 빛나는 눈을 보니 나까지 행복해졌어!"/>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="300dp"
+            android:background="@drawable/noun_triangle"/>
+    </FrameLayout>
+
+</LinearLayout>

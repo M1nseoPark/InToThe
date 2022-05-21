@@ -23,7 +23,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.FileProvider;
 
 import com.example.intothe.ChangeFace1.ChangeFace12;
-import com.example.intothe.FaceExpand.FaceExpand1;
+import com.example.intothe.FaceExpand.FaceExpand2;
 
 import java.io.File;
 import java.io.IOException;
@@ -66,7 +66,7 @@ public class PhotoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (photoMode.equals("FaceExpand")) {
-                    Intent intent = new Intent(getApplicationContext(), FaceExpand1.class);
+                    Intent intent = new Intent(getApplicationContext(), FaceExpand2.class);
                     startActivity(intent);
                 }
                 else if (photoMode.equals("ChangeFace")) {

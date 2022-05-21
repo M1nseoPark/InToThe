@@ -17,7 +17,7 @@ import com.example.intothe.TestPick;
 
 public class ChangeFace12 extends AppCompatActivity {
 
-    public static String rcResult;   // 모델 인식 결과
+    public static String rcResult2;   // 모델 인식 결과
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class ChangeFace12 extends AppCompatActivity {
 
 
         // 맞았을 때
-        if (rcResult.equals(stResult)) {
+        if (rcResult2.equals(stResult)) {
             gom.setImageResource(R.drawable.gom_happy);
             TestPick.right += 1;
 
@@ -47,7 +47,7 @@ public class ChangeFace12 extends AppCompatActivity {
         // 틀렸을 때
         else {
             gom.setImageResource(R.drawable.gom_sad);
-            tvFeedback.setText("땡! 너의 표정은 '" + rcResult + "'(이)야\n다음에 다시 도전해보자");
+            tvFeedback.setText("땡! 너의 표정은 '" + rcResult2 + "'(이)야\n다음에 다시 도전해보자");
             TestPick.wrong += 1;
         }
 

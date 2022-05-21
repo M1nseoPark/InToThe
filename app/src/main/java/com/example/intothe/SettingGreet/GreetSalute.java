@@ -1,5 +1,7 @@
 package com.example.intothe.SettingGreet;
 
+import static com.example.intothe.MainActivity.trainDate;
+
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -12,8 +14,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.intothe.ChangeFace2.ChangeFace21;
 import com.example.intothe.Login.LoginActivity;
+import com.example.intothe.MainActivity;
 import com.example.intothe.R;
+import com.example.intothe.ReportDBHelper;
 import com.example.intothe.UserDBHelper;
+
+import java.util.Random;
 
 public class GreetSalute extends AppCompatActivity {
 
@@ -31,6 +37,7 @@ public class GreetSalute extends AppCompatActivity {
         // db start
         UserDBHelper myDb = new UserDBHelper(GreetSalute.this);
         SQLiteDatabase db = myDb.getReadableDatabase();
+        ReportDBHelper myDb2 = new ReportDBHelper(GreetSalute.this);
 
         String sql = "select * from user where _id=" + LoginActivity.userId;
         Cursor cursor = db.rawQuery(sql, null);
@@ -38,7 +45,22 @@ public class GreetSalute extends AppCompatActivity {
             stGreeting = cursor.getString(4);
         }
 
+
+        // 훈련 랜덤 선택
+        Random random = new Random();
+        MainActivity.mode = random.nextInt(2);
+        if (MainActivity.mode == 0) {
+            myDb2.addBook(trainDate, "감정 말하기", null, null, "얼굴 확대하기", null, null, "사회성 척도", null, null);
+        }
+        else if (MainActivity.mode == 1) {
+            myDb2.addBook(trainDate, "얼굴 확대하기", null, null, "사회성 척도", null, null, "감정 말하기", null, null);
+        }
+        else if (MainActivity.mode == 2) {
+            myDb2.addBook(trainDate, "사회성 척도", null, null, "감정 말하기", null, null, "얼굴 확대하기", null, null);
+        }
+
         myDb.close();
+        myDb2.close();
         db.close();
         cursor.close();
 

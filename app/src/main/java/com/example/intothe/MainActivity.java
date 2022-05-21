@@ -26,7 +26,10 @@ public class MainActivity extends AppCompatActivity {
     long mNow;
     Date mDate;
     SimpleDateFormat mFormat = new SimpleDateFormat("yyyy-MM");
+    SimpleDateFormat mFormat2 = new SimpleDateFormat("yyyy-MM-dd");
 
+    public static int mode;   // 훈련 순서
+    public static String trainDate;   // 훈련 날짜
     public static String photoMode;
     String testDate;
     String settingDate;
@@ -46,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         mNow = System.currentTimeMillis();
         mDate = new Date(mNow);
         testDate = mFormat.format(mDate);
+        trainDate = mFormat2.format(mDate);
         ArrayList<String> dateList = new ArrayList<String>();   // 테스트를 한 날짜 리스트
 
         // db start

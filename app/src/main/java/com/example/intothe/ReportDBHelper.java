@@ -8,13 +8,15 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
+import com.example.intothe.Login.LoginActivity;
+
 public class ReportDBHelper extends SQLiteOpenHelper {
 
     private Context context;
     private static final String DATABASE_NAME = "Report.db";
     private static final int DATABASE_VERSION = 1;
     //    private static final String TABLE_NAME = "practice_library";
-    private static final String TABLE_NAME = "report";
+    private static final String TABLE_NAME = "report" + LoginActivity.userId;
     private static final String COLUMN_DATE = "trainDate";
     private static final String COLUMN_NAME_1 = "trainName1";
     private static final String COLUMN_SPECIAL_1 = "trainSpecial1";

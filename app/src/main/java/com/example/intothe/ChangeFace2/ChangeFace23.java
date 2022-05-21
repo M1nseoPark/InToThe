@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.intothe.MainActivity;
 import com.example.intothe.R;
 import com.example.intothe.TestPick;
 
@@ -46,6 +47,10 @@ public class ChangeFace23 extends AppCompatActivity {
                 if (ChangeFace21.number < 3) {
                     ChangeFace21.number += 1;
                     Intent intent = new Intent(getApplicationContext(), ChangeFace22.class);
+                    startActivity(intent);
+                }
+                else {
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
                 }
             }

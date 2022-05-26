@@ -50,7 +50,7 @@ public class ChangeFace12 extends AppCompatActivity {
         // 틀렸을 때
         else {
             gom.setImageResource(R.drawable.gom_sad);
-            tvFeedback.setText("땡! 너의 표정은 '" + rcResult2 + "'(이)야\n다음에 다시 도전해보자");
+            tvFeedback.setText("으음... 지금 너의 표정은 '" + rcResult2 + "'인 것 같아.\n다음에 다시 도전해보자!");
             TestPick.wrong += 1;
         }
 

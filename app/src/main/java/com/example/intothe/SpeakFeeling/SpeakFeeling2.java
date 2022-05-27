@@ -1,5 +1,7 @@
 package com.example.intothe.SpeakFeeling;
 
+import static android.os.SystemClock.sleep;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,6 +27,7 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 public class SpeakFeeling2 extends AppCompatActivity {
 
@@ -43,9 +46,6 @@ public class SpeakFeeling2 extends AppCompatActivity {
 
         talk.setText(Roulette.stResult + "가(이) 나왔네!\n너는 언제 " + Roulette.stResult + "을(를) 느껴봤어?");
 
-
-        stStory = etStory.getText().toString();
-
         // 다음 화면으로 이동
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,8 +54,10 @@ public class SpeakFeeling2 extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "내용을 입력해주세요", Toast.LENGTH_SHORT).show();
                 }
                 else {
-//                    makeRequest();
-                    Roulette.report += "입력: " + etStory + "\n";
+                    stStory = etStory.getText().toString();
+                    makeRequest();
+                    sleep(1000);
+//                    Roulette.report += "입력: " + etStory + "\n";
                     Intent intent = new Intent(getApplicationContext(), SpeakFeeling3.class);
                     startActivity(intent);
                 }
@@ -70,7 +72,8 @@ public class SpeakFeeling2 extends AppCompatActivity {
 
 
     public void makeRequest() {
-        String url = "http://127.0.0.1:5000/text_sentiment/?text=" + stStory;
+        String url = "http://3.38.43.78:5000/text_sentiment/?text=" + stStory;
+        Log.v("test", url);
 
 //      요청 객체 만들기 (요청방식, 웹사이트 주소, 응답받을 리스너 객체, 에러 발생시 호출될 리스너 객체)
         StringRequest request = new StringRequest(Request.Method.GET, url,
@@ -101,12 +104,7 @@ public class SpeakFeeling2 extends AppCompatActivity {
     }
 
     public void pressResponse(String response) {
-        try {
-            JSONObject Object = new JSONObject(response);
-            stStory = Object.getString("result");
-        }
-        catch (JSONException e) {
-            e.printStackTrace();
-        }
+        rcResult = response;
+        Log.v("test", rcResult);
     }
 }

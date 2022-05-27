@@ -100,6 +100,8 @@
             android:exported="true" />
         <activity android:name=".TrainEnd"
             android:exported="true" />
+        <activity android:name=".SpeakFeeling.SpeakFeeling3"
+            android:exported="true"/>
         <activity
             android:name=".FaceExpand.FaceExpand1"
             android:exported="true">

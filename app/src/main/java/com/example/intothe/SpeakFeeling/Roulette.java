@@ -72,7 +72,7 @@ public class Roulette extends AppCompatActivity {
         layoutRoulette = findViewById(R.id.layoutRoulette);
 
         num_roulette = number;
-        STRINGS = new ArrayList<>(Arrays.asList("분노", "혐오", "두려움", "기쁨", "슬픔", "놀람"));
+        STRINGS = new ArrayList<>(Arrays.asList("분노", "상처", "당황", "기쁨", "슬픔", "불안"));
         circleManager = new CircleManager(Roulette.this, num_roulette);
         layoutRoulette.addView(circleManager);
 

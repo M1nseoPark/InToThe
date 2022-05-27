@@ -26,7 +26,7 @@ public class FaceExpand1 extends AppCompatActivity {
         MainActivity.photoMode = "FaceExpand";   // PhotoActivity에서 화면 이동을 위해 기록
 
 //        talk.setText(LoginActivity.userName.substring(1,3) + "아(야) 얼굴 확대하기 시간이야.\n카메라 버튼을 누르고 이목구비를 확대해서\n찍어볼래?");
-        talk.setText("얼굴 확대하기 시간이야.\n카메라 버튼을 누르고 이목구비를 확대해서\n찍어볼래?");
+        talk.setText("얼굴 확대하기 시간이야.\n카메라 버튼을 누르고 보여주고 싶은 부분을 확대해서\n찍어볼래?");
 
         btn_photo.setOnClickListener(new View.OnClickListener() {
             @Override

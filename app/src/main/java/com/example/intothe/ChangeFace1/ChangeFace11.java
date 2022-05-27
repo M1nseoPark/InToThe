@@ -26,7 +26,7 @@ public class ChangeFace11 extends AppCompatActivity {
         MainActivity.photoMode = "ChangeFace";   // PhotoActivity에서 화면 이동을 위해 기록
         TextView feeling = (TextView) findViewById(R.id.feeling);
 
-        String[] FeelList = {"분노", "혐오", "두려움", "기쁨", "슬픔", "놀람"};
+        String[] FeelList = {"기쁨", "당황", "분노", "불안", "상처", "슬픔", "중립"};
         Random random = new Random();
         int pick = random.nextInt(FeelList.length - 1);
 

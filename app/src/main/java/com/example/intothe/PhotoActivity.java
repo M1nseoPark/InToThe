@@ -36,6 +36,8 @@ public class PhotoActivity extends AppCompatActivity {
     ImageView iv_photo;
     final static int TAKE_PICTURE = 1;
 
+    public static File photoFile = null;
+
     // 경로 변수와 요청변수 생성
     String mCurrentPhotoPath;
     final static int REQUEST_TAKE_PHOTO = 1;
@@ -131,7 +133,7 @@ public class PhotoActivity extends AppCompatActivity {
     private void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if(takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            File photoFile = null;
+
             try { photoFile = createImageFile(); }
             catch (IOException ex) { }
             if(photoFile != null) {

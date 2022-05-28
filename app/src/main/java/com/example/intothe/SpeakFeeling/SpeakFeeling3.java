@@ -250,18 +250,18 @@ public class SpeakFeeling3 extends AppCompatActivity {
                     }
 
                     // 훈련보고서 db에 기록
-//                    if (MainActivity.mode == 0) {
-//                        db.execSQL("UPDATE report" + LoginActivity.userId + " SET trainSpecial1='" + Roulette.special + "' WHERE trainDate='" + MainActivity.trainDate + "';");
-//                        db.execSQL("UPDATE report" + LoginActivity.userId + " SET trainContent1='" + Roulette.report + "' WHERE trainDate='" + MainActivity.trainDate + "';");
-//                    }
-//                    else if (MainActivity.mode == 1) {
-//                        db.execSQL("UPDATE report" + LoginActivity.userId + " SET trainSpecial3='" + Roulette.special + "' WHERE trainDate='" + MainActivity.trainDate + "';");
-//                        db.execSQL("UPDATE report" + LoginActivity.userId + " SET trainContent3='" + Roulette.report + "' WHERE trainDate='" + MainActivity.trainDate + "';");
-//                    }
-//                    else if (MainActivity.mode == 2) {
-//                        db.execSQL("UPDATE report" + LoginActivity.userId + " SET trainSpecial2='" + Roulette.special + "' WHERE trainDate='" + MainActivity.trainDate + "';");
-//                        db.execSQL("UPDATE report" + LoginActivity.userId + " SET trainContent2='" + Roulette.report + "' WHERE trainDate='" + MainActivity.trainDate + "';");
-//                    }
+                    if (MainActivity.mode == 0) {
+                        db.execSQL("UPDATE report" + LoginActivity.userId + " SET trainSpecial1='" + Roulette.special + "' WHERE trainDate='" + MainActivity.trainDate + "';");
+                        db.execSQL("UPDATE report" + LoginActivity.userId + " SET trainContent1='" + Roulette.report + "' WHERE trainDate='" + MainActivity.trainDate + "';");
+                    }
+                    else if (MainActivity.mode == 1) {
+                        db.execSQL("UPDATE report" + LoginActivity.userId + " SET trainSpecial3='" + Roulette.special + "' WHERE trainDate='" + MainActivity.trainDate + "';");
+                        db.execSQL("UPDATE report" + LoginActivity.userId + " SET trainContent3='" + Roulette.report + "' WHERE trainDate='" + MainActivity.trainDate + "';");
+                    }
+                    else if (MainActivity.mode == 2) {
+                        db.execSQL("UPDATE report" + LoginActivity.userId + " SET trainSpecial2='" + Roulette.special + "' WHERE trainDate='" + MainActivity.trainDate + "';");
+                        db.execSQL("UPDATE report" + LoginActivity.userId + " SET trainContent2='" + Roulette.report + "' WHERE trainDate='" + MainActivity.trainDate + "';");
+                    }
 
                     // 다음 훈련으로 이동
                     if (MainActivity.mode == 0) {

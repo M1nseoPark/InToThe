@@ -9,14 +9,15 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.example.intothe.Login.LoginActivity;
+import com.example.intothe.Login.RegisterActivity;
 
 public class FaceDBHelper extends SQLiteOpenHelper {
 
     private Context context;
     private static final String DATABASE_NAME = "Face.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     //    private static final String TABLE_NAME = "practice_library";
-    private static final String TABLE_NAME = "face" + LoginActivity.userId;
+    private static final String TABLE_NAME = "face" + RegisterActivity.userId;
     private static final String COLUMN_ID = "_id";
     private static final String COLUMN_DATE = "testDate";
     private static final String COLUMN_SCORE_RIGHT = "rightScore";

@@ -1,5 +1,6 @@
 package com.example.intothe;
 
+import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -9,14 +10,16 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.example.intothe.Login.LoginActivity;
+import com.example.intothe.Login.RegisterActivity;
 
 public class ReportDBHelper extends SQLiteOpenHelper {
 
     private Context context;
     private static final String DATABASE_NAME = "Report.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     //    private static final String TABLE_NAME = "practice_library";
-    private static final String TABLE_NAME = "report" + LoginActivity.userId;
+    private static final String TABLE_NAME = "report" + RegisterActivity.userId;
+    private static final String COLUMN_ID = "_id";
     private static final String COLUMN_DATE = "trainDate";
     private static final String COLUMN_NAME_1 = "trainName1";
     private static final String COLUMN_SPECIAL_1 = "trainSpecial1";
@@ -38,7 +41,8 @@ public class ReportDBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db)
     {
         String query = "CREATE TABLE " + TABLE_NAME
-                + " (" + COLUMN_DATE + " TEXT, "
+                + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + COLUMN_DATE + " TEXT, "
                 + COLUMN_NAME_1 + " TEXT, "
                 + COLUMN_SPECIAL_1 + " TEXT, "
                 + COLUMN_CONTENT_1 + " TEXT, "

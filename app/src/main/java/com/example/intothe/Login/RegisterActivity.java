@@ -1,9 +1,12 @@
 package com.example.intothe.Login;
 
+import static android.os.SystemClock.sleep;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +15,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.amitshekhar.DebugDB;
+import com.example.intothe.FaceDBHelper;
 import com.example.intothe.R;
+import com.example.intothe.ReportDBHelper;
 import com.example.intothe.UserDBHelper;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -28,6 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
     private DatabaseReference mDatabaseRef;   // 실시간 데이터베이스
     private EditText mEtEmail, mEtPwd, mEtName, mEtBirth;   // 회원가입 입력 필드
     private Button mBtnRegister;   // 회원가입 버튼
+    public static String userId;   // 회원가입한 사용자의 아이디
 
     UserDBHelper userDbHelper;
     SQLiteDatabase db = null;
@@ -39,8 +45,8 @@ public class RegisterActivity extends AppCompatActivity {
 
         DebugDB.getAddressLog();
 
-        // UserDB, ResultDB 생성
         UserDBHelper myDb = new UserDBHelper(RegisterActivity.this);
+        SQLiteDatabase db = myDb.getReadableDatabase();
 
         // 파이어베이스
         mFirebaseAuth = FirebaseAuth.getInstance();
@@ -92,6 +98,18 @@ public class RegisterActivity extends AppCompatActivity {
                                 // setValue : database에 삽입
                                 mDatabaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
                                 myDb.addBook(strName, strEmail, strBirth, null, null, null, null);
+
+                                // ResultDB, FaceDB 생성
+                                Cursor cursor = db.rawQuery("select * from user where email = ?", new String[]{strEmail});
+                                while(cursor.moveToNext()){
+                                    userId = String.valueOf(cursor.getInt(0));
+                                }
+                                ReportDBHelper myDb2 = new ReportDBHelper(RegisterActivity.this);
+                                SQLiteDatabase db2 = myDb2.getWritableDatabase();
+                                FaceDBHelper myDb3 = new FaceDBHelper(RegisterActivity.this);
+                                SQLiteDatabase db3 = myDb3.getWritableDatabase();
+                                myDb2.onCreate(db2);
+                                myDb3.onCreate(db3);
 
                                 Toast.makeText(RegisterActivity.this, "회원가입에 성공하셨습니다", Toast.LENGTH_SHORT).show();
 

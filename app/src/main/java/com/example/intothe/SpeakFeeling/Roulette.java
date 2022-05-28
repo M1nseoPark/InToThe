@@ -96,7 +96,7 @@ public class Roulette extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "룰렛을 먼저 돌려주세요", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    report += "'" + stResult + "'감정에 대해 이야기 하였습니다\n";
+                    report += "\"" + stResult + "\"감정에 대해 이야기 하였습니다\n";
                     Intent intent = new Intent(getApplicationContext(), SpeakFeeling2.class);
                     startActivity(intent);
                 }

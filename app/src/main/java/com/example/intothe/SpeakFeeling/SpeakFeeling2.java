@@ -72,7 +72,7 @@ public class SpeakFeeling2 extends AppCompatActivity {
 
 
     public void makeRequest() {
-        String url = "http://3.38.43.78:5000/text_sentiment/?text=" + stStory;
+        String url = "http://3.35.67.156:5000/text_sentiment/?text=" + stStory;
         Log.v("test", url);
 
 //      요청 객체 만들기 (요청방식, 웹사이트 주소, 응답받을 리스너 객체, 에러 발생시 호출될 리스너 객체)

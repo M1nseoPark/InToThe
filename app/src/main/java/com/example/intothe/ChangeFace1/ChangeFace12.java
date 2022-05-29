@@ -1,6 +1,7 @@
 package com.example.intothe.ChangeFace1;
 
 import static com.example.intothe.ChangeFace1.ChangeFace11.stResult;
+import static com.example.intothe.ChangeFace1.ChangeFace11.rcResult;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,7 +18,7 @@ import com.example.intothe.TestPick;
 
 public class ChangeFace12 extends AppCompatActivity {
 
-    public static String rcResult2;   // 모델 인식 결과
+    public static String rcResult2 = rcResult;   // 모델 인식 결과
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

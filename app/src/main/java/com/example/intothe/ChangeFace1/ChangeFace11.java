@@ -24,13 +24,16 @@ import org.apache.hc.core5.http.HttpEntity;
 import org.apache.hc.core5.http.HttpResponse;
 import org.apache.hc.core5.http.ParseException;
 import org.apache.hc.core5.http.io.entity.EntityUtils;
-import org.json.JSONException;
-import org.json.JSONObject;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 public class ChangeFace11 extends AppCompatActivity {
 
@@ -77,10 +80,19 @@ public class ChangeFace11 extends AppCompatActivity {
             e.printStackTrace();
         } catch (ParseException e) {
             e.printStackTrace();
+        } catch (org.json.simple.parser.ParseException e) {
+            e.printStackTrace();
+        }
+
+        //결과에서 결과값을 문자열로 get
+        try {
+            rcResult = getResult(json);
+        } catch (org.json.simple.parser.ParseException e) {
+            e.printStackTrace();
         }
     }
 
-    public static String makeRequest() throws IOException, ParseException, ClientProtocolException {
+    public static String makeRequest() throws IOException, ParseException, ClientProtocolException, org.json.simple.parser.ParseException {
         CloseableHttpClient httpClient = HttpClients.createDefault();
         HttpEntity entity = MultipartEntityBuilder.create()
                 .setMode(HttpMultipartMode.EXTENDED)
@@ -94,25 +106,43 @@ public class ChangeFace11 extends AppCompatActivity {
         httpPost.addHeader("User-Agent", USER_AGENT);
         httpPost.setEntity(entity);
 
+        // 서버로 파일 전송 후 결과 수신
         HttpResponse response = httpClient.execute(httpPost);
         HttpEntity result = ((CloseableHttpResponse) response).getEntity();
 
-        String result_text = EntityUtils.toString(result, String.valueOf(StandardCharsets.UTF_8));
+        // 결과 = json 문자열
+        String jsonString = EntityUtils.toString(result, StandardCharsets.UTF_8);
 
-        System.out.println(result);
-        System.out.println(result_text);
-
-        //httpClient.close();
-        return result_text;
+        return jsonString;
     }
 
-    public static void getResult() throws JSONException {
-        String result_text = "{\n" +
-                "  \"0\": [\n" +
-                "    \"0.926131\"\n" +
-                "  ]\n" +
-                "}\n";
-        JSONObject jObject = new JSONObject(result_text);
-        jObject.keys();
+    public static String getResult(String jsonString) throws org.json.simple.parser.ParseException {
+        // json 문자열의 key 값을 알아오기 위한 jsonObj 객체 생성
+        JSONParser parser = new JSONParser();
+        Object obj = parser.parse(jsonString);
+        JSONObject jsonObj = (JSONObject) obj;
+
+        // key 값을 Set 에 저장
+        Set s = jsonObj.keySet();
+        Object[] r = s.toArray();
+
+        String result = null;
+
+        if(r[0] == "0")
+            result = "기쁨";
+        else if(r[0] == "1")
+            result = "당황";
+        else if(r[0] == "2")
+            result = "분노";
+        else if(r[0] == "3")
+            result = "불안";
+        else if(r[0] == "4")
+            result = "상처";
+        else if(r[0] == "5")
+            result = "슬픔";
+        else if(r[0] == "6")
+            result = "중립";
+
+        return result;
     }
 }

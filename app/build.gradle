@@ -47,6 +47,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-crashlytics-buildtools:2.7.1'
     implementation files('httpclient5-5.1.3.jar')
     implementation files('httpcore5-5.1.3.jar')
+    implementation 'org.json:org.json:chargebee-1.0'
+    implementation 'org.json:json:20220320'
+    implementation files('json-simple-1.1.1-javadoc.jar')
+    implementation files('json-simple-1.1.1.jar')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'

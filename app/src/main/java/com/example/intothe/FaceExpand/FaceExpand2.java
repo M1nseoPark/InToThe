@@ -1,5 +1,7 @@
 package com.example.intothe.FaceExpand;
 
+import static com.example.intothe.FaceExpand.FaceExpand1.rcResult;
+
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -9,7 +11,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.intothe.Login.LoginActivity;
 import com.example.intothe.MainActivity;
 import com.example.intothe.R;
 import com.example.intothe.ReportDBHelper;
@@ -18,7 +19,7 @@ import com.example.intothe.TrainEnd;
 
 public class FaceExpand2 extends AppCompatActivity {
 
-    public static String rcResult3;   // 모델 인식 결과
+    public static String rcResult3 = rcResult;   // 모델 인식 결과
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

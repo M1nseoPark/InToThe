@@ -18,6 +18,7 @@ import com.amitshekhar.DebugDB;
 import com.example.intothe.FaceDBHelper;
 import com.example.intothe.R;
 import com.example.intothe.ReportDBHelper;
+import com.example.intothe.Test.ResultDBHelper;
 import com.example.intothe.UserDBHelper;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -108,8 +109,11 @@ public class RegisterActivity extends AppCompatActivity {
                                 SQLiteDatabase db2 = myDb2.getWritableDatabase();
                                 FaceDBHelper myDb3 = new FaceDBHelper(RegisterActivity.this);
                                 SQLiteDatabase db3 = myDb3.getWritableDatabase();
+                                ResultDBHelper myDb4 = new ResultDBHelper(RegisterActivity.this);
+                                SQLiteDatabase db4 = myDb3.getWritableDatabase();
                                 myDb2.onCreate(db2);
                                 myDb3.onCreate(db3);
+                                myDb4.onCreate(db4);
 
                                 Toast.makeText(RegisterActivity.this, "회원가입에 성공하셨습니다", Toast.LENGTH_SHORT).show();
 

@@ -95,15 +95,15 @@ public class TrainReport1 extends AppCompatActivity {
                 if (cursor.getCount() != 0) {
                     Log.v("test", "access");
                     while(cursor.moveToNext()){
-                        trainName1 = cursor.getString(1);
-                        trainSpecial1 = cursor.getString(2);
-                        trainContent1 = cursor.getString(3);
-                        trainName2 = cursor.getString(4);
-                        trainSpecial2 = cursor.getString(5);
-                        trainContent2 = cursor.getString(6);
-                        trainName3 = cursor.getString(7);
-                        trainSpecial3 = cursor.getString(8);
-                        trainContent3 = cursor.getString(9);
+                        trainName1 = cursor.getString(2);
+                        trainSpecial1 = cursor.getString(3);
+                        trainContent1 = cursor.getString(4);
+                        trainName2 = cursor.getString(5);
+                        trainSpecial2 = cursor.getString(6);
+                        trainContent2 = cursor.getString(7);
+                        trainName3 = cursor.getString(8);
+                        trainSpecial3 = cursor.getString(9);
+                        trainContent3 = cursor.getString(10);
                     }
 
                     // DB 레이아웃에 반영

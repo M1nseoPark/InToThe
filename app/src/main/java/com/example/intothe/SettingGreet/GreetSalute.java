@@ -86,7 +86,7 @@ public class GreetSalute extends AppCompatActivity {
 //                    Intent intent = new Intent(getApplicationContext(), SocialScale1.class);
 //                    startActivity(intent);
 //                }
-                Intent intent = new Intent(getApplicationContext(), FaceExpand1.class);
+                Intent intent = new Intent(getApplicationContext(), Roulette.class);
                 startActivity(intent);
             }
         });

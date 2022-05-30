@@ -42,6 +42,11 @@ public class LoginActivity extends AppCompatActivity {
 
         DebugDB.getAddressLog();
 
+//        ReportDBHelper myDb2 = new ReportDBHelper(LoginActivity.this);
+//        SQLiteDatabase db2 = myDb2.getWritableDatabase();
+//        db2.execSQL("DELETE FROM report2 WHERE _id=10");
+//        db2.execSQL("DELETE FROM report2 WHERE _id=11");
+
         UserDBHelper myDb = new UserDBHelper(LoginActivity.this);
         SQLiteDatabase db = myDb.getReadableDatabase();
 

@@ -44,11 +44,11 @@ public class TrainReport2 extends AppCompatActivity {
         // 제목 설정
         tvDate.setText(String.format("%d월 %d일\n훈련 보고서", monthR, dayR));
         tvTrainName1.setText(trainName1);
-//        tvTrainDetail1.setText(trainContent1);
+        tvTrainDetail1.setText(trainContent1);
         tvTrainName2.setText(trainName2);
-//        tvTrainDetail2.setText(trainContent2);
+        tvTrainDetail2.setText(trainContent2);
         tvTrainName3.setText(trainName3);
-//        tvTrainDetail3.setText(trainContent3);
+        tvTrainDetail3.setText(trainContent3);
 
 
         // 확인 버튼

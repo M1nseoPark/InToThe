@@ -37,11 +37,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_marginBottom="130dp"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:textColor="@color/black"
             android:fontFamily="@font/spoqahansansneo_medium"
             android:textSize="18dp"
-            android:text="(이름)아 얼굴 확대하기 시간이야.\n카메라 버튼을 누르고 이목구비를 확대해서\n찍어볼래?"/>
+            android:text="(이름)아 얼굴 확대하기 시간이야.\n카메라 버튼을 누르고 너의 얼굴을 찍어줄래?\n"/>
     </FrameLayout>
 
 </LinearLayout>

@@ -67,6 +67,7 @@ public class SpeakFeeling3 extends AppCompatActivity {
                     gom.setImageResource(R.drawable.gom_sad);
                     tvFeedback.setText("너가 말한 감정은 '슬픔'이 아니라 '" + SpeakFeeling2.rcResult + "'야!\n오늘 부모님과 함께 슬픔에 대해서 이야기 해보면 좋을 것 같아!");
 
+                    Roulette.time += 1;
                     move = true;
                     Roulette.special = "false";
                 }
@@ -77,7 +78,7 @@ public class SpeakFeeling3 extends AppCompatActivity {
         else if (Roulette.stResult.equals("당황")) {
             String stResult2 = "불안";
             if (Roulette.stResult.equals(SpeakFeeling2.rcResult) || stResult2.equals(SpeakFeeling2.rcResult)) {
-                gom.setImageResource(R.drawable.gom_happy);
+                gom.setImageResource(R.drawable.gom_surprise);
                 tvFeedback.setText("정말 당황스럽다 " + LoginActivity.userName.substring(1,3) + "야\n어떻게 그런 일이!!");
 
                 move = true;
@@ -101,6 +102,7 @@ public class SpeakFeeling3 extends AppCompatActivity {
                     gom.setImageResource(R.drawable.gom_sad);
                     tvFeedback.setText("너가 말한 감정은 '당황'이 아니라 '" + SpeakFeeling2.rcResult + "'야!\n오늘 부모님과 함께 당황에 대해서 이야기 해보면 좋을 것 같아!");
 
+                    Roulette.time += 1;
                     move = true;
                     Roulette.special = "false";
                 }
@@ -135,6 +137,7 @@ public class SpeakFeeling3 extends AppCompatActivity {
                     gom.setImageResource(R.drawable.gom_sad);
                     tvFeedback.setText("너가 말한 감정은 '분노'가 아니라 '" + SpeakFeeling2.rcResult + "'야!\n오늘 부모님과 함께 분노에 대해서 이야기 해보면 좋을 것 같아!");
 
+                    Roulette.time += 1;
                     move = true;
                     Roulette.special = "false";
                 }
@@ -168,6 +171,7 @@ public class SpeakFeeling3 extends AppCompatActivity {
                     gom.setImageResource(R.drawable.gom_sad);
                     tvFeedback.setText("너가 말한 감정은 '기쁨'이 아니라 '" + SpeakFeeling2.rcResult + "'야!\n오늘 부모님과 함께 기쁨에 대해서 이야기 해보면 좋을 것 같아!");
 
+                    Roulette.time += 1;
                     move = true;
                     Roulette.special = "false";
                 }
@@ -178,7 +182,7 @@ public class SpeakFeeling3 extends AppCompatActivity {
         else if (Roulette.stResult.equals("상처")) {
             String stResult2 = "분노";
             if (Roulette.stResult.equals(SpeakFeeling2.rcResult) || stResult2.equals(SpeakFeeling2.rcResult)) {
-                gom.setImageResource(R.drawable.gom_angry);
+                gom.setImageResource(R.drawable.gom_sad);
                 tvFeedback.setText("그런 일이 있었다니 내가 다 가슴이 아프다ㅠㅠ\n그런 기억은 빨리 잊고 훌훌 털어버리자");
 
                 move = true;
@@ -202,6 +206,7 @@ public class SpeakFeeling3 extends AppCompatActivity {
                     gom.setImageResource(R.drawable.gom_sad);
                     tvFeedback.setText("너가 말한 감정은 '상처'가 아니라 '" + SpeakFeeling2.rcResult + "'야!\n오늘 부모님과 함께 상처에 대해서 이야기 해보면 좋을 것 같아!");
 
+                    Roulette.time += 1;
                     move = true;
                     Roulette.special = "false";
                 }
@@ -212,7 +217,7 @@ public class SpeakFeeling3 extends AppCompatActivity {
         else if (Roulette.stResult.equals("불안")) {
             String stResult2 = "당황";
             if (Roulette.stResult.equals(SpeakFeeling2.rcResult) || stResult2.equals(SpeakFeeling2.rcResult)) {
-                gom.setImageResource(R.drawable.gom_surprise);
+                gom.setImageResource(R.drawable.gom_sad);
                 tvFeedback.setText("후하후하 난 불안할 땐 심호흡을 크게 하면 낫더라\n잘될거야 너무 불안해하지마");
 
                 move = true;
@@ -236,6 +241,7 @@ public class SpeakFeeling3 extends AppCompatActivity {
                     gom.setImageResource(R.drawable.gom_sad);
                     tvFeedback.setText("너가 말한 감정은 '불안'이 아니라 '" + SpeakFeeling2.rcResult + "'야!\n오늘 부모님과 함께 불안에 대해서 이야기 해보면 좋을 것 같아!");
 
+                    Roulette.time += 1;
                     move = true;
                     Roulette.special = "false";
                 }
@@ -248,8 +254,8 @@ public class SpeakFeeling3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (move) {
-                    Roulette.report += "위와 같이 " + LoginActivity.userId + "님은 " + Roulette.time + "번의 시도를 하셨습니다";
-                    if (!Roulette.special.equals("false") ) {
+                    Roulette.report += "위와 같이 " + LoginActivity.userName + "님은 " + Roulette.time + "번의 시도를 하셨습니다";
+                    if (Roulette.special == null) {
                         Roulette.special = "true";
                     }
 

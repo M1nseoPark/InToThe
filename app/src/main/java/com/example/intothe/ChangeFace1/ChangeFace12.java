@@ -42,7 +42,7 @@ public class ChangeFace12 extends AppCompatActivity {
                 tvFeedback.setText("정답이야! 기쁨을 표현할 수 있는 네가 정말 자랑스러워!\n덕분에 나도 행복해지는걸?");
             }
             else if (stResult.equals("당황")) {
-                tvFeedback.setText("정답이야! 당황을 표현할 수 있는 네가 정말 자랑스러워!\n너의 표정을 보니 나까지 당황했지 뭐야!");
+                tvFeedback.setText("정답이야! 당황을 표현할 수 있는 네가 정말 자랑스러워!\n실감나는 네 표정을 보니 나까지 당황했지 뭐야!");
             }
             else if (stResult.equals("중립")) {
                 tvFeedback.setText("정답이야! 무표정을 잘 표현했구나!\n다양한 표정을 가진 네가 정말 자랑스러워!\n");
@@ -51,7 +51,7 @@ public class ChangeFace12 extends AppCompatActivity {
         // 틀렸을 때
         else {
             gom.setImageResource(R.drawable.gom_sad);
-            tvFeedback.setText("으음... 지금 너의 표정은 '" + rcResult2 + "'인 것 같아.\n다음에 다시 도전해보자!");
+            tvFeedback.setText("으음... 지금 네 표정은 '" + rcResult2 + "'인 것 같아.\n다음에 다시 도전해보자!");
             TestPick.wrong += 1;
         }
 

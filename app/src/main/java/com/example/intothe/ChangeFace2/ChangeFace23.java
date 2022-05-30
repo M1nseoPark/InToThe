@@ -30,12 +30,12 @@ public class ChangeFace23 extends AppCompatActivity {
 
         // 정답 피드백
         if (ChangeFace22.choose.equals(questions.get(pick.get(ChangeFace21.number)).getAnswer())) {
-            tvFeedback.setText("잘했어! 이렇게 하면 돼\n역시 (이름)는 최고야");
+            tvFeedback.setText("잘했어! 이렇게 하면 돼.\n역시 (이름)는 최고야~!");
             TestPick.right += 1;
         }
         else {
             gom.setImageResource(R.drawable.gom_sad);
-            tvFeedback.setText("땡! 정답은 " + questions.get(pick.get(ChangeFace21.number)).getAnswer() + "이야\n다음에는 꼭 맞추자! 파이팅");
+            tvFeedback.setText("땡! 정답은 " + questions.get(pick.get(ChangeFace21.number)).getAnswer() + "이야.\n다음에는 꼭 맞추자! 화이팅~!");
             TestPick.wrong += 1;
         }
 

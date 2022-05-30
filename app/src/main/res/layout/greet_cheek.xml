@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:background="#F9EDCB">
+    android:background="#F9EDCB"
+    android:orientation="vertical">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -23,32 +23,36 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
             android:layout_marginTop="50dp"
-            android:textColor="@color/black"
             android:fontFamily="@font/spoqahansansneo_medium"
-            android:textSize="25dp"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="100dp"
-            app:srcCompat="@drawable/gom_cheek_origin"/>
+            app:srcCompat="@drawable/gom_cheek_origin" />
 
         <Button
             android:id="@+id/btHand1"
             android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginLeft="80dp"
+            android:layout_marginTop="240dp"
             android:background="#00ff0000"
-            android:layout_marginTop="240dp" />
+            android:clickable="true"
+            android:focusable="true" />
 
         <Button
             android:id="@+id/btHand2"
             android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:background="#00ff0000"
+            android:layout_height="50dp"
+            android:layout_marginLeft="260dp"
             android:layout_marginTop="240dp"
-            android:layout_marginLeft="260dp" />
+            android:background="#00ff0000"
+            android:clickable="true"
+            android:focusable="true" />
 
     </FrameLayout>
 

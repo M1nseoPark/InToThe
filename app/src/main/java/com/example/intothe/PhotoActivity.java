@@ -11,6 +11,8 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Looper;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
@@ -23,7 +25,10 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.FileProvider;
 
 import com.example.intothe.ChangeFace1.ChangeFace12;
+import com.example.intothe.FaceExpand.FaceExpand1;
 import com.example.intothe.FaceExpand.FaceExpand2;
+
+import org.apache.hc.core5.http.ParseException;
 
 import java.io.File;
 import java.io.IOException;
@@ -42,41 +47,46 @@ public class PhotoActivity extends AppCompatActivity {
     String mCurrentPhotoPath;
     final static int REQUEST_TAKE_PHOTO = 1;
 
-    @Override protected void onCreate(Bundle savedInstanceState) {
+    private Handler uiHandler;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo);
         iv_photo = findViewById(R.id.iv_photo);
         btn_photo = findViewById(R.id.btn_photo);
 
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if(checkSelfPermission(android.Manifest.permission.CAMERA) ==
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (checkSelfPermission(android.Manifest.permission.CAMERA) ==
                     PackageManager.PERMISSION_GRANTED &&
                     checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) ==
                             PackageManager.PERMISSION_GRANTED) {
                 Log.d(TAG, "권한 설정 완료");
-            }
-            else {
+            } else {
                 Log.d(TAG, "권한 설정 요청");
-                ActivityCompat.requestPermissions(PhotoActivity.this, new String[] {
+                ActivityCompat.requestPermissions(PhotoActivity.this, new String[]{
                         android.Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
             }
         }
 
-        dispatchTakePictureIntent();
-
+        btn_photo.setEnabled(false);
         btn_photo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (photoMode.equals("FaceExpand")) {
                     Intent intent = new Intent(getApplicationContext(), FaceExpand2.class);
                     startActivity(intent);
-                }
-                else if (photoMode.equals("ChangeFace")) {
+                } else if (photoMode.equals("ChangeFace")) {
                     Intent intent = new Intent(getApplicationContext(), ChangeFace12.class);
                     startActivity(intent);
                 }
             }
         });
+
+        uiHandler = new Handler(Looper.getMainLooper());
+
+        dispatchTakePictureIntent();
     }
 
     // 권한 요청
@@ -84,7 +94,7 @@ public class PhotoActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         Log.d(TAG, "onRequestPermissionsResult");
-        if (grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED ) {
+        if (grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
             Log.d(TAG, "Permission: " + permissions[0] + "was " + grantResults[0]);
         }
     }
@@ -104,14 +114,47 @@ public class PhotoActivity extends AppCompatActivity {
                         if (bitmap != null) {
                             iv_photo.setImageBitmap(bitmap);
                         }
-                    }
-                    catch (IOException e) {
+                    } catch (IOException e) {
                         e.printStackTrace();
 
                     }
 
                     if (bitmap != null) {
                         iv_photo.setImageBitmap(bitmap);
+
+                        FaceExpand1.file = PhotoActivity.photoFile;
+                        FaceExpand1.FILE_PATH = file.getPath();
+
+                        new Thread(() -> {
+                            //이미지 파일을 받아서 서버로 결과 요청
+                            try {
+                                FaceExpand1.json = FaceExpand1.makeRequest();
+
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            } catch (ParseException e) {
+                                e.printStackTrace();
+                            } catch (org.json.simple.parser.ParseException e) {
+                                e.printStackTrace();
+                            }
+
+                            //결과에서 결과값을 문자열로 get
+                            try {
+                                FaceExpand1.rcResult = FaceExpand1.getResult(FaceExpand1.json);
+
+                                uiHandler.post(() -> {
+                                    if (FaceExpand1.rcResult == null) {
+                                        dispatchTakePictureIntent();
+
+                                    } else {
+                                        btn_photo.setEnabled(true);
+                                    }
+                                });
+
+                            } catch (org.json.simple.parser.ParseException e) {
+                                e.printStackTrace();
+                            }
+                        }).start();
                     }
                 }
                 break;
@@ -132,11 +175,13 @@ public class PhotoActivity extends AppCompatActivity {
     // 카메라 인텐트 실행하는 부분
     private void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if(takePictureIntent.resolveActivity(getPackageManager()) != null) {
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
 
-            try { photoFile = createImageFile(); }
-            catch (IOException ex) { }
-            if(photoFile != null) {
+            try {
+                photoFile = createImageFile();
+            } catch (IOException ex) {
+            }
+            if (photoFile != null) {
                 Uri photoURI = FileProvider.getUriForFile(this, "com.example.intothe.fileprovider", photoFile);
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);

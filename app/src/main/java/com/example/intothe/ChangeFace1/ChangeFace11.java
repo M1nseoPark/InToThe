@@ -43,7 +43,7 @@ public class ChangeFace11 extends AppCompatActivity {
     public static String rcResult; // 모델 결과
 
     //URL IP 주소는 서버 열때마다 바뀌므로 수정 필요
-    private static final String POST_URL = "http://3.38.43.78:5000/face_sentiment/";
+    private static final String POST_URL = "http://3.35.67.156:5000/face_sentiment/";
     private static final String USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:94.0) Gecko/20100101 Firefox/94.0";
     private static String FILE_PATH;
 

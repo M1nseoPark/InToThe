@@ -54,7 +54,7 @@ public class TestReport extends AppCompatActivity {
         mNow = System.currentTimeMillis();
         mDate = new Date(mNow);
 
-//        myDb2.addBook(mFormat.format(mDate), TestPick.right, TestPick.wrong);
+        myDb2.addBook(mFormat.format(mDate), TestPick.right, TestPick.wrong);
 
 
         ArrayList<String> dateList2 = new ArrayList<String>();

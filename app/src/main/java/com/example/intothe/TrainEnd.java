@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.intothe.Login.LoginActivity;
+
 import nl.dionsegijn.konfetti.KonfettiView;
 import nl.dionsegijn.konfetti.models.Shape;
 import nl.dionsegijn.konfetti.models.Size;
@@ -23,6 +25,8 @@ public class TrainEnd extends AppCompatActivity {
         final KonfettiView konfettiView = findViewById(R.id.viewKonfetti);
         Button next = (Button) findViewById(R.id.next);
         TextView talk = (TextView) findViewById(R.id.talk);
+
+        talk.setText(LoginActivity.userName.substring(1,3) + "(아)야 오늘 훈련을 모두 끝냈어!\n수고 많았어 정말\n내가 축하해줄게! 화면을 한번 클릭해봐");
 
         // 꽃가루
         konfettiView.setOnClickListener(new View.OnClickListener() {

@@ -76,20 +76,18 @@ public class GreetHighFive extends AppCompatActivity {
         btHand1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                if (MainActivity.mode == 0) {
-//                    Intent intent = new Intent(getApplicationContext(), Roulette.class);
-//                    startActivity(intent);
-//                }
-//                else if (MainActivity.mode == 1) {
-//                    Intent intent = new Intent(getApplicationContext(), FaceExpand1.class);
-//                    startActivity(intent);
-//                }
-//                else if (MainActivity.mode == 2) {
-//                    Intent intent = new Intent(getApplicationContext(), SocialScale1.class);
-//                    startActivity(intent);
-//                }
-                Intent intent = new Intent(getApplicationContext(), FaceExpand1.class);
-                startActivity(intent);
+                if (MainActivity.mode == 0) {
+                    Intent intent = new Intent(getApplicationContext(), Roulette.class);
+                    startActivity(intent);
+                }
+                else if (MainActivity.mode == 1) {
+                    Intent intent = new Intent(getApplicationContext(), FaceExpand1.class);
+                    startActivity(intent);
+                }
+                else if (MainActivity.mode == 2) {
+                    Intent intent = new Intent(getApplicationContext(), SocialScale1.class);
+                    startActivity(intent);
+                }
             }
         });
 

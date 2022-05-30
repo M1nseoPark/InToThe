@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.intothe.Login.LoginActivity;
 import com.example.intothe.MainActivity;
 import com.example.intothe.R;
 import com.example.intothe.TestPick;
@@ -30,7 +31,7 @@ public class ChangeFace23 extends AppCompatActivity {
 
         // 정답 피드백
         if (ChangeFace22.choose.equals(questions.get(pick.get(ChangeFace21.number)).getAnswer())) {
-            tvFeedback.setText("잘했어! 이렇게 하면 돼\n역시 (이름)는 최고야");
+            tvFeedback.setText("잘했어! 이렇게 하면 돼\n역시 "+ LoginActivity.userName.substring(1,3) + "는 최고야");
             TestPick.right += 1;
         }
         else {
@@ -44,7 +45,7 @@ public class ChangeFace23 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (ChangeFace21.number < 3) {
+                if (ChangeFace21.number < 2) {
                     ChangeFace21.number += 1;
                     Intent intent = new Intent(getApplicationContext(), ChangeFace22.class);
                     startActivity(intent);

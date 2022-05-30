@@ -50,7 +50,7 @@ public class ChangeFace11 extends AppCompatActivity {
     public static String rcResult; // 모델 결과
 
     //URL IP 주소는 서버 열때마다 바뀌므로 수정 필요
-    private static final String POST_URL = "http://3.35.67.156:5000/face_sentiment/";
+    private static final String POST_URL = "http://3.38.109.112:5000/face_sentiment/";
     private static final String USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:94.0) Gecko/20100101 Firefox/94.0";
     public static String FILE_PATH;
 
@@ -110,15 +110,19 @@ public class ChangeFace11 extends AppCompatActivity {
         try {
             org.json.JSONObject object = new JSONObject(jsonString);
             if (object.has("0"))
-                return "Face";
+                return "기쁨";
             else if (object.has("1"))
-                return "Eye";
+                return "당황";
             else if (object.has("2"))
-                return "Nose";
+                return "분노";
             else if (object.has("3"))
-                return "Mouth";
+                return "불안";
             else if (object.has("4"))
-                return "Ear";
+                return "상처";
+            else if (object.has("5"))
+                return "슬픔";
+            else if (object.has("6"))
+                return "중립";
 
         } catch (Exception e) {
             e.printStackTrace();

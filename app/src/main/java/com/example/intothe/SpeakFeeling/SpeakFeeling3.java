@@ -78,7 +78,7 @@ public class SpeakFeeling3 extends AppCompatActivity {
             String stResult2 = "불안";
             if (Roulette.stResult.equals(SpeakFeeling2.rcResult) || stResult2.equals(SpeakFeeling2.rcResult)) {
                 gom.setImageResource(R.drawable.gom_happy);
-                tvFeedback.setText("정말 당황스럽다" + LoginActivity.userName.substring(1,3) + "야 어떻게 그런 일이!!");
+                tvFeedback.setText("정말 당황스럽다 " + LoginActivity.userName.substring(1,3) + "야\n어떻게 그런 일이!!");
 
                 move = true;
             }
@@ -179,7 +179,7 @@ public class SpeakFeeling3 extends AppCompatActivity {
             String stResult2 = "분노";
             if (Roulette.stResult.equals(SpeakFeeling2.rcResult) || stResult2.equals(SpeakFeeling2.rcResult)) {
                 gom.setImageResource(R.drawable.gom_angry);
-                tvFeedback.setText("그런 일이 있었다니 내가 다 가슴이 아프다ㅠㅠ 그런 기억은 빨리 잊고 훌훌 털어버리자");
+                tvFeedback.setText("그런 일이 있었다니 내가 다 가슴이 아프다ㅠㅠ\n그런 기억은 빨리 잊고 훌훌 털어버리자");
 
                 move = true;
             }
@@ -249,9 +249,13 @@ public class SpeakFeeling3 extends AppCompatActivity {
             public void onClick(View view) {
                 if (move) {
                     Roulette.report += "위와 같이 " + LoginActivity.userId + "님은 " + Roulette.time + "번의 시도를 하셨습니다";
-                    if (!Roulette.special.equals("false")) {
+                    if (!Roulette.special.equals("false") ) {
                         Roulette.special = "true";
                     }
+
+                    Log.v("test", Roulette.report);
+                    Log.v("test", Roulette.special);
+                    Log.v("test", Integer.toString(Roulette.time));
 
                     // 훈련보고서 db에 기록
                     if (MainActivity.mode == 0) {
@@ -282,6 +286,7 @@ public class SpeakFeeling3 extends AppCompatActivity {
                     }
                 }
                 else {
+                    Log.v("test", Roulette.report);
                     Intent intent = new Intent(getApplicationContext(), SpeakFeeling2.class);
                     startActivity(intent);
                 }

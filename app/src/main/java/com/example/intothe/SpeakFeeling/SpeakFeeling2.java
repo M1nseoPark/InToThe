@@ -2,6 +2,8 @@ package com.example.intothe.SpeakFeeling;
 
 import static android.os.SystemClock.sleep;
 
+import static com.example.intothe.SpeakFeeling.Roulette.stResult;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -44,7 +46,7 @@ public class SpeakFeeling2 extends AppCompatActivity {
         EditText etStory = (EditText) findViewById(R.id.etStory);
         Button button = (Button) findViewById(R.id.next);
 
-        talk.setText(Roulette.stResult + "가(이) 나왔네!\n너는 언제 " + Roulette.stResult + "을(를) 느껴봤어?");
+        talk.setText(stResult + "가(이) 나왔네!\n너는 언제 " + stResult + "을(를) 느껴봤어?");
 
         // 다음 화면으로 이동
         button.setOnClickListener(new View.OnClickListener() {
@@ -57,7 +59,7 @@ public class SpeakFeeling2 extends AppCompatActivity {
                     stStory = etStory.getText().toString();
                     makeRequest();
                     sleep(1000);
-                    Roulette.report += "입력: " + etStory + "\n";
+                    Roulette.report += "입력: " + stStory + "\n";
                     Intent intent = new Intent(getApplicationContext(), SpeakFeeling3.class);
                     startActivity(intent);
                 }
@@ -72,7 +74,7 @@ public class SpeakFeeling2 extends AppCompatActivity {
 
 
     public void makeRequest() {
-        String url = "http://3.38.43.78:5000/text_sentiment/?text=" + stStory;
+        String url = "http://3.38.109.112:5000/text_sentiment/?text=" + stStory;
         Log.v("test", url);
 
 //      요청 객체 만들기 (요청방식, 웹사이트 주소, 응답받을 리스너 객체, 에러 발생시 호출될 리스너 객체)

@@ -24,6 +24,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.FileProvider;
 
+import com.example.intothe.ChangeFace1.ChangeFace11;
 import com.example.intothe.ChangeFace1.ChangeFace12;
 import com.example.intothe.FaceExpand.FaceExpand1;
 import com.example.intothe.FaceExpand.FaceExpand2;
@@ -119,42 +120,84 @@ public class PhotoActivity extends AppCompatActivity {
 
                     }
 
-                    if (bitmap != null) {
-                        iv_photo.setImageBitmap(bitmap);
+                    if (photoMode.equals("FaceExpand")) {
+                        if (bitmap != null) {
+                            iv_photo.setImageBitmap(bitmap);
 
-                        FaceExpand1.file = PhotoActivity.photoFile;
-                        FaceExpand1.FILE_PATH = file.getPath();
+                            FaceExpand1.file = PhotoActivity.photoFile;
+                            FaceExpand1.FILE_PATH = file.getPath();
 
-                        new Thread(() -> {
-                            //이미지 파일을 받아서 서버로 결과 요청
-                            try {
-                                FaceExpand1.json = FaceExpand1.makeRequest();
+                            new Thread(() -> {
+                                //이미지 파일을 받아서 서버로 결과 요청
+                                try {
+                                    FaceExpand1.json = FaceExpand1.makeRequest();
 
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            } catch (ParseException e) {
-                                e.printStackTrace();
-                            } catch (org.json.simple.parser.ParseException e) {
-                                e.printStackTrace();
-                            }
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                } catch (org.json.simple.parser.ParseException e) {
+                                    e.printStackTrace();
+                                }
 
-                            //결과에서 결과값을 문자열로 get
-                            try {
-                                FaceExpand1.rcResult = FaceExpand1.getResult(FaceExpand1.json);
+                                //결과에서 결과값을 문자열로 get
+                                try {
+                                    FaceExpand1.rcResult = FaceExpand1.getResult(FaceExpand1.json);
 
-                                uiHandler.post(() -> {
-                                    if (FaceExpand1.rcResult == null) {
-                                        dispatchTakePictureIntent();
+                                    uiHandler.post(() -> {
+                                        if (FaceExpand1.rcResult == null) {
+                                            dispatchTakePictureIntent();
 
-                                    } else {
-                                        btn_photo.setEnabled(true);
-                                    }
-                                });
+                                        } else {
+                                            btn_photo.setEnabled(true);
+                                        }
+                                    });
 
-                            } catch (org.json.simple.parser.ParseException e) {
-                                e.printStackTrace();
-                            }
-                        }).start();
+                                } catch (org.json.simple.parser.ParseException e) {
+                                    e.printStackTrace();
+                                }
+                            }).start();
+                        }
+                    }
+
+                    if(photoMode.equals("ChangeFace")) {
+                        if (bitmap != null) {
+                            iv_photo.setImageBitmap(bitmap);
+
+                            ChangeFace11.file = PhotoActivity.photoFile;
+                            ChangeFace11.FILE_PATH = file.getPath();
+
+                            new Thread(() -> {
+                                //이미지 파일을 받아서 서버로 결과 요청
+                                try {
+                                    ChangeFace11.json = ChangeFace11.makeRequest();
+
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                } catch (org.json.simple.parser.ParseException e) {
+                                    e.printStackTrace();
+                                }
+
+                                //결과에서 결과값을 문자열로 get
+                                try {
+                                    ChangeFace11.rcResult = ChangeFace11.getResult(ChangeFace11.json);
+
+                                    uiHandler.post(() -> {
+                                        if (ChangeFace11.rcResult == null) {
+                                            dispatchTakePictureIntent();
+
+                                        } else {
+                                            btn_photo.setEnabled(true);
+                                        }
+                                    });
+
+                                } catch (org.json.simple.parser.ParseException e) {
+                                    e.printStackTrace();
+                                }
+                            }).start();
+                        }
                     }
                 }
                 break;

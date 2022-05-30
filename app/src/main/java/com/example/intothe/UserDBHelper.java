@@ -12,7 +12,7 @@ public class UserDBHelper extends SQLiteOpenHelper {
 
     private Context context;
     private static final String DATABASE_NAME = "User.db";
-    private static final int DATABASE_VERSION = 4;
+    private static final int DATABASE_VERSION = 5;
 //    private static final String TABLE_NAME = "practice_library";
     private static final String TABLE_NAME = "user";
     private static final String COLUMN_ID = "_id";

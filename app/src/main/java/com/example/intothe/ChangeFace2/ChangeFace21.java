@@ -27,7 +27,7 @@ public class ChangeFace21 extends AppCompatActivity {
         Button button = (Button) findViewById(R.id.next);
         TextView talk = (TextView) findViewById(R.id.talk);
 
-        talk.setText("이번엔 내가 " + LoginActivity.userName.substring(1,3) + "(이)에게 영상 3개를 보여줄게!\n이게 어떤 감정 상황인지 맞춰 줄래?");
+        talk.setText("이번엔 내가 " + LoginActivity.userName.substring(1,3) + "(이)에게 영상 3개를 보여줄게!\n이게 어떤 감정 상황인지 맞혀 줄래?");
 
         // 문제 랜덤 선택
         Random rand = new Random();

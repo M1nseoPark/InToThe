@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -78,6 +79,9 @@ public class LoginActivity extends AppCompatActivity {
                             myDb.close();
                             db.close();
                             cursor.close();
+
+                            RegisterActivity.userId = LoginActivity.userId;
+                            Log.v("test", RegisterActivity.userId);
 
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(intent);

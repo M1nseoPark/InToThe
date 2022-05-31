@@ -41,7 +41,7 @@ public class SocialScale4 extends AppCompatActivity {
         // 사용자의 답변에 대한 피드백
         if (SocialScale2.array.get(SocialScale1.pick.get(SocialScale1.number)).getAnswer() == 1) {
             if (SocialScale3.value1 >= 80) {
-                tvFeedback.setText("잘했어!"+ LoginActivity.userName.substring(1,3) + "아(야)\n내 생각도 너랑 같아");
+                tvFeedback.setText("잘했어!"+ LoginActivity.userName.substring(1,3) + "아(야)!\n내 생각도 너랑 같아!");
                 report += "\"" + SocialScale2.array.get(SocialScale1.pick.get(SocialScale1.number)).getSituation() + "\"라는 상황에 대해 \""
                         + SocialScale2.array.get(SocialScale1.pick.get(SocialScale1.number)).getExam1() + "\"라고 적절한 응답을 하셨습니다\n";
             }
@@ -56,7 +56,7 @@ public class SocialScale4 extends AppCompatActivity {
         }
         else {
             if (SocialScale3.value2 >= 80) {
-                tvFeedback.setText("잘했어!"+ LoginActivity.userName.substring(1,3) + "아(야)\n내 생각도 너랑 같아");
+                tvFeedback.setText("잘했어!"+ LoginActivity.userName.substring(1,3) + "아(야)!\n내 생각도 너랑 같아!");
                 report += "\"" + SocialScale2.array.get(SocialScale1.pick.get(SocialScale1.number)).getSituation() + "\"라는 상황에 대해 \""
                         + SocialScale2.array.get(SocialScale1.pick.get(SocialScale1.number)).getExam2() + "\"라고 적절한 응답을 하셨습니다\n";
             }

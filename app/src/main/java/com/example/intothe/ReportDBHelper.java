@@ -18,7 +18,7 @@ public class ReportDBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "Report.db";
     private static final int DATABASE_VERSION = 7;
     //    private static final String TABLE_NAME = "practice_library";
-    private static final String TABLE_NAME = "report" + LoginActivity.userId;
+    private static final String TABLE_NAME = "report" + RegisterActivity.userId;
     private static final String COLUMN_ID = "_id";
     private static final String COLUMN_DATE = "trainDate";
     private static final String COLUMN_NAME_1 = "trainName1";

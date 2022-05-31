@@ -36,7 +36,7 @@ public class ChangeFace23 extends AppCompatActivity {
         }
         else {
             gom.setImageResource(R.drawable.gom_sad);
-            tvFeedback.setText("땡! 정답은 " + questions.get(pick.get(ChangeFace21.number)).getAnswer() + "이야\n다음에는 꼭 맞추자! 파이팅");
+            tvFeedback.setText("땡! 정답은 " + questions.get(pick.get(ChangeFace21.number)).getAnswer() + "이야.\n다음에는 꼭 맞추자! 화이팅~!");
             TestPick.wrong += 1;
         }
 

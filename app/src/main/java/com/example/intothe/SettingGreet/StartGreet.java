@@ -21,7 +21,7 @@ public class StartGreet extends AppCompatActivity {
         Button next = (Button) findViewById(R.id.next);
         TextView talk = (TextView) findViewById(R.id.talk);
 
-        talk.setText(LoginActivity.userName.substring(1,3) + "아(야) 나랑 한달 동안 할 특별한\n인사를 정할 시간이야!");
+        talk.setText(LoginActivity.userName.substring(1,3) + "아(야)! 나랑 한달 동안 할 특별한\n인사를 정할 시간이야!");
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
